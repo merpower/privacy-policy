@@ -1,102 +1,175 @@
-# Privacy Policy for FinMate: Expense & Budget
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πολιτική Απορρήτου (Privacy Policy) - Finmate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #090D16 0%, #0F172A 50%, #050B14 100%);
+            --card-bg: rgba(30, 41, 59, 0.75);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary-emerald: #10B981;
+            --primary-glow: rgba(16, 185, 129, 0.25);
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+        }
 
-**Last Updated:** September 29, 2026  
-**Developer:** Anastasios Meresentzis (MerPower)  
-**Contact Email:** [anastasiosmeresentzes@gmail.com](mailto:anastasiosmeresentzes@gmail.com)  
-**Website:** [https://merpowerapps.infinityfreeapp.com/?i=1](https://merpowerapps.infinityfreeapp.com/?i=1)
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
 
----
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
 
-## 1. Introduction
+        .container {
+            max-width: 780px;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 28px;
+            padding: 44px 36px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px var(--primary-glow);
+        }
 
-Welcome to **FinMate: Expense & Budget** (also referred to as "the App", "we", "us", or "our"). We are committed to protecting your privacy. This Privacy Policy explains our practices regarding the collection, use, disclosure, and protection of information when you use our mobile application on Android and iOS devices.
+        .header {
+            text-align: center;
+            margin-bottom: 36px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 24px;
+        }
 
-**FinMate is designed with a Privacy-First, 100% Offline philosophy.** We believe your personal financial data belongs solely to you.
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(to right, #FFFFFF, #CBD5E1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
----
+        .subtitle {
+            color: var(--primary-emerald);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
 
-## 2. Information Collection and Storage
+        .section {
+            margin-bottom: 28px;
+        }
 
-### 2.1 100% Local Financial Data Storage
-- **All financial records**—including account balances, transaction history, expense categories, recurring bills, obligations, and savings goals—are stored **strictly locally on your device** in a private SQLite database.
-- **Zero Cloud Sync of Financial Data:** We do not operate remote financial servers or synchronize your personal transactions to any cloud database.
-- **No Banking Credentials:** The App does not connect to Open Banking APIs, scrape bank websites, or request banking passwords, card numbers, or PINs.
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #E2E8F0;
+            margin-bottom: 12px;
+        }
 
-### 2.2 Biometric & App Lock Data
-- When you enable App Lock (PIN or Biometric Unlock), authentication is handled entirely by your device’s local operating system hardware keystore (`local_auth`).
-- We never have access to, collect, or transmit your fingerprint, face data, or raw biometric templates.
-- Custom PINs are hashed and salted locally using SHA-256 and never leave your device.
+        p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #CBD5E1;
+            margin-bottom: 12px;
+        }
 
-### 2.3 Automated Data Collection & Third-Party SDKs
-To maintain and improve the App, certain third-party libraries may process limited, pseudonymous technical identifiers:
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: #CBD5E1;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
 
-1. **Google Firebase Analytics:**
-   - Collects aggregated, non-personally identifiable diagnostic events (such as screen views, app version, device model, and OS version) to improve app performance and stability.
-   - Financial figures, note contents, and transaction titles are **never** logged to analytics.
-   - Privacy Policy: [https://policies.google.com/privacy](https://policies.google.com/privacy)
+        li {
+            margin-bottom: 6px;
+        }
 
-2. **Google AdMob & Meta Audience Network (Mediation):**
-   - Displays advertisements to support free access to the App.
-   - These advertising networks may use anonymized mobile advertising identifiers (e.g., Google Advertising ID / IDFA) and device attributes to serve relevant or non-personalized ads in compliance with GDPR and Google Play policies.
-   - You can opt out of personalized ads via your device system settings or upgrade to the Ad-Free version within the App.
-   - Privacy Policy: [https://policies.google.com/technologies/ads](https://policies.google.com/technologies/ads)
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
 
-3. **RevenueCat (In-App Purchases & Entitlements):**
-   - We use RevenueCat to process in-app purchases (e.g., permanent Ad-Removal) and validate active entitlements securely.
-   - All payment transactions (credit cards, billing details) are processed exclusively and securely by **Google Play Billing** (on Android) or **Apple In-App Purchases** (on iOS). We never receive, store, or process your credit card or banking details.
-   - RevenueCat processes pseudonymous transaction IDs and receipt tokens strictly for confirming purchase status and restoring previous purchases across devices.
-   - Privacy Policy: [https://www.revenuecat.com/privacy/](https://www.revenuecat.com/privacy/)
+        .highlight-box p {
+            color: #E2E8F0;
+            margin-bottom: 0;
+        }
 
----
+        footer {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #64748B;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Πολιτική Απορρήτου</h1>
+            <p class="subtitle">Finmate: Expense & Budget Manager • Τελευταία ενημέρωση: Οκτώβριος 2026</p>
+        </div>
 
-## 3. Device Permissions
+        <div class="highlight-box">
+            <p><strong>🔒 100% Privacy-First & Offline:</strong> Το Finmate είναι σχεδιασμένο με επίκεντρο το απόλυτο απόρρητο. Όλα τα οικονομικά σας δεδομένα (τραπεζικοί λογαριασμοί, υπόλοιπα, συναλλαγές, υποχρεώσεις) αποθηκεύονται αποκλειστικά τοπικά στη συσκευή σας.</p>
+        </div>
 
-The App requests minimal device permissions necessary to deliver its core features:
+        <div class="section">
+            <h2>1. Συλλογή & Χρήση Δεδομένων</h2>
+            <p>Η εφαρμογή <strong>δεν</strong> συλλέγει, <strong>δεν</strong> αποθηκεύει σε εξωτερικούς διακομιστές (servers) και <strong>δεν</strong> διαβιβάζει σε τρίτους κανένα προσωπικό ή οικονομικό δεδομένο σας. Δεν απαιτείται εγγραφή (login), σύνδεση με τραπεζικούς λογαριασμούς ή εισαγωγή προσωπικών στοιχείων ταυτότητας.</p>
+        </div>
 
-| Permission | Purpose |
-| :--- | :--- |
-| `POST_NOTIFICATIONS` | Used strictly for scheduled local notifications to remind you of upcoming bills, recurring obligations, and payday alerts. Notifications are generated 100% locally on your device. |
-| `USE_BIOMETRIC` / `USE_FINGERPRINT` | Used to verify your identity locally when unlocking the App. |
-| `INTERNET` / `ACCESS_NETWORK_STATE` | Required exclusively for loading advertisements and anonymous crash/analytics telemetry. |
-| `SCHEDULE_EXACT_ALARM` | Required on Android 12+ to deliver precise, on-time bill reminder notifications. |
+        <div class="section">
+            <h2>2. Τοπική Αποθήκευση & Αντίγραφα Ασφαλείας (Backup)</h2>
+            <p>Όλες οι εγγραφές αποθηκεύονται στην τοπική κρυπτογραφημένη βάση δεδομένων της συσκευής σας (SQLite). Έχετε τον πλήρη έλεγχο των δεδομένων σας ανά πάσα στιγμή:</p>
+            <ul>
+                <li>Δυνατότητα εξαγωγής των συναλλαγών σας σε μορφή <strong>CSV</strong>.</li>
+                <li>Δημιουργία και επαναφορά τοπικών αρχείων αντιγράφων ασφαλείας (Backup).</li>
+                <li>Άμεση και οριστική διαγραφή όλων των δεδομένων από τις ρυθμίσεις της εφαρμογής.</li>
+            </ul>
+        </div>
 
----
+        <div class="section">
+            <h2>3. Διαφημίσεις & Google Mobile Ads (AdMob)</h2>
+            <p>Η εφαρμογή χρησιμοποιεί το δίκτυο της <strong>Google Mobile Ads (AdMob)</strong> και <strong>Meta Audience Network</strong> για την προβολή μη παρεμβατικών διαφημίσεων. Η Google ενδέχεται να συλλέγει ανώνυμα αναγνωριστικά διαφήμισης (Advertising ID) σύμφωνα με την <a href="https://policies.google.com/privacy" target="_blank" style="color: #10B981;">Πολιτική Απορρήτου της Google</a>.</p>
+            <p>Για τους χρήστες εντός της Ευρωπαϊκής Ένωσης (GDPR), παρέχεται το επίσημο σύστημα <strong>Google User Messaging Platform (UMP)</strong>, με δυνατότητα επιλογής ή ανάκλησης της συγκατάθεσης ανά πάσα στιγμή μέσα από τις ρυθμίσεις.</p>
+        </div>
 
-## 4. Data Retention, Export & Deletion
+        <div class="section">
+            <h2>4. Αγορές Εντός Εφαρμογής (In-App Purchases)</h2>
+            <p>Οι αγορές για την αφαίρεση διαφημίσεων εκτελούνται με ασφάλεια μέσω του <strong>Google Play Billing</strong> και του <strong>RevenueCat</strong>. Δεν συλλέγουμε ούτε αποθηκεύουμε στοιχεία πιστωτικών καρτών ή τραπεζικά στοιχεία.</p>
+        </div>
 
-- **You have total control over your data.**
-- **Local CSV & JSON Backup:** You can export all your transaction records to CSV spreadsheets or full JSON backup files at any time.
-- **Instant Data Wiping:** You can permanently delete all accounts, transactions, goals, and recurring obligations directly in the App under **Settings → Database & Storage → Reset Database**.
-- Uninstalling the App permanently removes all locally stored application data from your device.
+        <div class="section">
+            <h2>5. Διαγνωστικά & Αναφορές Σφαλμάτων</h2>
+            <p>Χρησιμοποιούμε τις υπηρεσίες <strong>Firebase Crashlytics & Analytics</strong> αποκλειστικά για την ανίχνευση τεχνικών σφαλμάτων και τη βελτίωση της σταθερότητας της εφαρμογής.</p>
+        </div>
 
----
+        <div class="section">
+            <h2>6. Επικοινωνία</h2>
+            <p>Για οποιαδήποτε απορία σχετικά με την παρούσα Πολιτική Απορρήτου, επικοινωνήστε στο email: <strong style="color: #10B981;">anastasiosmeresentzes@gmail.com</strong>.</p>
+        </div>
+    </div>
 
-## 5. Children's Privacy (COPPA & GDPR-K)
-
-**FinMate: Expense & Budget** does not knowingly collect or solicit personal information from children under the age of 13 (or under 16 in the European Union). If we discover that personal data of a minor has been collected, we will take immediate steps to delete it.
-
----
-
-## 6. Security
-
-We implement industry-standard safeguards to protect your information:
-- Local database isolation in the private internal app sandbox.
-- Salted SHA-256 password hashing.
-- TLS/HTTPS encryption for any advertising/telemetry network traffic.
-
----
-
-## 7. Changes to This Privacy Policy
-
-We may update our Privacy Policy periodically. Any revisions will be reflected on this page with an updated "Last Updated" date. We encourage you to review this page periodically.
-
----
-
-## 8. Contact Us
-
-If you have questions, feedback, or concerns regarding this Privacy Policy or your data privacy, please contact:
-
-- **Developer:** Anastasios Meresentzis
-- **Email:** [anastasiosmeresentzes@gmail.com](mailto:anastasiosmeresentzes@gmail.com)
-- **Website:** [https://merpowerapps.infinityfreeapp.com/?i=1](https://merpowerapps.infinityfreeapp.com/?i=1)
-- **Telegram:** [https://t.me/worldnewsreader](https://t.me/worldnewsreader)
+    <footer>
+        &copy; 2026 Finmate • Anastasios Meresentzis. All rights reserved.
+    </footer>
+</body>
+</html>
