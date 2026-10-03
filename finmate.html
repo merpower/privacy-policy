@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Πολιτική Απορρήτου (Privacy Policy) - Finmate</title>
+    <title>Privacy Policy - FinMate: Expense & Budget</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-gradient: linear-gradient(135deg, #090D16 0%, #0F172A 50%, #050B14 100%);
-            --card-bg: rgba(30, 41, 59, 0.75);
+            --bg-gradient: linear-gradient(135deg, #070B12 0%, #0F172A 50%, #040810 100%);
+            --card-bg: rgba(30, 41, 59, 0.72);
             --card-border: rgba(255, 255, 255, 0.08);
             --primary-emerald: #10B981;
-            --primary-glow: rgba(16, 185, 129, 0.25);
+            --primary-glow: rgba(16, 185, 129, 0.20);
             --text-main: #F8FAFC;
+            --text-secondary: #CBD5E1;
             --text-muted: #94A3B8;
+            --table-header: rgba(16, 185, 129, 0.12);
+            --table-border: rgba(255, 255, 255, 0.07);
         }
 
         * {
@@ -32,65 +35,169 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            padding: 40px 16px;
         }
 
         .container {
-            max-width: 780px;
+            max-width: 820px;
             width: 100%;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 28px;
-            padding: 44px 36px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px var(--primary-glow);
+            padding: 48px 36px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 40px var(--primary-glow);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Language Switcher Bar */
+        .lang-switch-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 24px;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: rgba(15, 23, 42, 0.80);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 4px;
+            gap: 4px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-btn.active {
+            background: var(--primary-emerald);
+            color: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.40);
+        }
+
+        .lang-btn:hover:not(.active) {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.06);
         }
 
         .header {
             text-align: center;
-            margin-bottom: 36px;
+            margin-bottom: 32px;
             border-bottom: 1px solid var(--card-border);
             padding-bottom: 24px;
         }
 
-        h1 {
-            font-size: 2.2rem;
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            border-radius: 20px;
+            font-size: 0.82rem;
             font-weight: 700;
-            margin-bottom: 8px;
-            background: linear-gradient(to right, #FFFFFF, #CBD5E1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary-emerald);
+            margin-bottom: 16px;
+            letter-spacing: 0.4px;
         }
 
-        .subtitle {
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(to right, #FFFFFF, #E2E8F0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .meta-info {
+            color: var(--text-muted);
+            font-size: 0.90rem;
+            line-height: 1.6;
+        }
+
+        .meta-info strong {
+            color: var(--text-secondary);
+        }
+
+        .meta-info a {
             color: var(--primary-emerald);
-            font-size: 0.95rem;
-            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .meta-info a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 16px;
+            padding: 18px 22px;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            color: #E2E8F0;
+            font-size: 0.96rem;
+            line-height: 1.65;
+            margin-bottom: 0;
         }
 
         .section {
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
         h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #E2E8F0;
+            font-size: 1.30rem;
+            font-weight: 700;
+            color: #F1F5F9;
             margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.3px;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary-emerald);
+            margin: 14px 0 8px 0;
         }
 
         p {
             font-size: 0.95rem;
             line-height: 1.7;
-            color: #CBD5E1;
+            color: var(--text-secondary);
             margin-bottom: 12px;
         }
 
-        ul {
-            margin-left: 20px;
-            margin-bottom: 16px;
-            color: #CBD5E1;
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 14px;
+            color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.7;
         }
@@ -99,77 +206,467 @@
             margin-bottom: 6px;
         }
 
-        .highlight-box {
-            background: rgba(16, 185, 129, 0.08);
-            border: 1px solid rgba(16, 185, 129, 0.25);
-            border-radius: 16px;
-            padding: 16px 20px;
-            margin: 20px 0;
+        li strong {
+            color: #FFFFFF;
         }
 
-        .highlight-box p {
-            color: #E2E8F0;
-            margin-bottom: 0;
+        a {
+            color: var(--primary-emerald);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, monospace;
+            font-size: 0.88em;
+            color: #A7F3D0;
+        }
+
+        /* Permissions Table */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 16px 0 20px 0;
+            border-radius: 14px;
+            border: 1px solid var(--table-border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.90rem;
+            text-align: left;
+        }
+
+        th {
+            background: var(--table-header);
+            color: #FFFFFF;
+            font-weight: 700;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--table-border);
+            letter-spacing: 0.3px;
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--table-border);
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: var(--card-border);
+            margin: 28px 0;
         }
 
         footer {
-            margin-top: 32px;
+            margin-top: 36px;
             text-align: center;
             font-size: 0.85rem;
-            color: #64748B;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Language visibility */
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 32px 20px;
+                border-radius: 20px;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            h2 {
+                font-size: 1.15rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Πολιτική Απορρήτου</h1>
-            <p class="subtitle">Finmate: Expense & Budget Manager • Τελευταία ενημέρωση: Οκτώβριος 2026</p>
+        <!-- Language Switcher Bar -->
+        <div class="lang-switch-wrapper">
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">🇬🇧 English</button>
+                <button class="lang-btn" id="btn-el" onclick="setLanguage('el')">🇬🇷 Ελληνικά</button>
+            </div>
         </div>
 
-        <div class="highlight-box">
-            <p><strong>🔒 100% Privacy-First & Offline:</strong> Το Finmate είναι σχεδιασμένο με επίκεντρο το απόλυτο απόρρητο. Όλα τα οικονομικά σας δεδομένα (τραπεζικοί λογαριασμοί, υπόλοιπα, συναλλαγές, υποχρεώσεις) αποθηκεύονται αποκλειστικά τοπικά στη συσκευή σας.</p>
+        <!-- ==================================================================== -->
+        <!-- ENGLISH CONTENT (Default for Google Play & Global Users)             -->
+        <!-- ==================================================================== -->
+        <div id="content-en" class="lang-content active">
+            <div class="header">
+                <div class="app-badge">🔒 Privacy-First Architecture</div>
+                <h1>Privacy Policy for FinMate: Expense & Budget</h1>
+                <p class="meta-info">
+                    <strong>Last Updated:</strong> September 29, 2026<br>
+                    <strong>Developer:</strong> Anastasios Meresentzis (MerPower)<br>
+                    <strong>Contact Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a><br>
+                    <strong>Website:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a>
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>FinMate is designed with a Privacy-First, 100% Offline philosophy.</strong> We believe your personal financial data belongs solely to you. We do not operate cloud servers storing your financial records, transactions, or banking credentials.</p>
+            </div>
+
+            <div class="section">
+                <h2>1. Introduction</h2>
+                <p>Welcome to <strong>FinMate: Expense & Budget</strong> (also referred to as "the App", "we", "us", or "our"). We are committed to protecting your privacy. This Privacy Policy explains our practices regarding the collection, use, disclosure, and protection of information when you use our mobile application on Android and iOS devices.</p>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>2. Information Collection and Storage</h2>
+                
+                <h3>2.1 100% Local Financial Data Storage</h3>
+                <ul>
+                    <li><strong>All financial records</strong>—including account balances, transaction history, expense categories, recurring bills, obligations, and savings goals—are stored <strong>strictly locally on your device</strong> in a private SQLite database.</li>
+                    <li><strong>Zero Cloud Sync of Financial Data:</strong> We do not operate remote financial servers or synchronize your personal transactions to any cloud database.</li>
+                    <li><strong>No Banking Credentials:</strong> The App does not connect to Open Banking APIs, scrape bank websites, or request banking passwords, card numbers, or PINs.</li>
+                </ul>
+
+                <h3>2.2 Biometric & App Lock Data</h3>
+                <ul>
+                    <li>When you enable App Lock (PIN or Biometric Unlock), authentication is handled entirely by your device’s local operating system hardware keystore (<code>local_auth</code>).</li>
+                    <li>We never have access to, collect, or transmit your fingerprint, face data, or raw biometric templates.</li>
+                    <li>Custom PINs are hashed and salted locally using SHA-256 and never leave your device.</li>
+                </ul>
+
+                <h3>2.3 Automated Data Collection & Third-Party SDKs</h3>
+                <p>To maintain and improve the App, certain third-party libraries may process limited, pseudonymous technical identifiers:</p>
+                <ol>
+                    <li>
+                        <strong>Google Firebase Analytics:</strong>
+                        <ul>
+                            <li>Collects aggregated, non-personally identifiable diagnostic events (such as screen views, app version, device model, and OS version) to improve app performance and stability.</li>
+                            <li>Financial figures, note contents, and transaction titles are <strong>never</strong> logged to analytics.</li>
+                            <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Google AdMob & Meta Audience Network (Mediation):</strong>
+                        <ul>
+                            <li>Displays advertisements to support free access to the App.</li>
+                            <li>These advertising networks may use anonymized mobile advertising identifiers (e.g., Google Advertising ID / IDFA) and device attributes to serve relevant or non-personalized ads in compliance with GDPR and Google Play policies.</li>
+                            <li>You can opt out of personalized ads via your device system settings or upgrade to the Ad-Free version within the App.</li>
+                            <li>Privacy Policy: <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>RevenueCat (In-App Purchases & Entitlements):</strong>
+                        <ul>
+                            <li>We use RevenueCat to process in-app purchases (e.g., permanent Ad-Removal) and validate active entitlements securely.</li>
+                            <li>All payment transactions (credit cards, billing details) are processed exclusively and securely by <strong>Google Play Billing</strong> (on Android) or <strong>Apple In-App Purchases</strong> (on iOS). We never receive, store, or process your credit card or banking details.</li>
+                            <li>RevenueCat processes pseudonymous transaction IDs and receipt tokens strictly for confirming purchase status and restoring previous purchases across devices.</li>
+                            <li>Privacy Policy: <a href="https://www.revenuecat.com/privacy/" target="_blank">https://www.revenuecat.com/privacy/</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>3. Device Permissions</h2>
+                <p>The App requests minimal device permissions necessary to deliver its core features:</p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Permission</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>POST_NOTIFICATIONS</code></td>
+                                <td>Used strictly for scheduled local notifications to remind you of upcoming bills, recurring obligations, and payday alerts. Notifications are generated 100% locally on your device.</td>
+                            </tr>
+                            <tr>
+                                <td><code>USE_BIOMETRIC</code> / <code>USE_FINGERPRINT</code></td>
+                                <td>Used to verify your identity locally when unlocking the App.</td>
+                            </tr>
+                            <tr>
+                                <td><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code></td>
+                                <td>Required exclusively for loading advertisements and anonymous crash/analytics telemetry.</td>
+                            </tr>
+                            <tr>
+                                <td><code>SCHEDULE_EXACT_ALARM</code></td>
+                                <td>Required on Android 12+ to deliver precise, on-time bill reminder notifications.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>4. Data Retention, Export & Deletion</h2>
+                <ul>
+                    <li><strong>You have total control over your data.</strong></li>
+                    <li><strong>Local CSV & JSON Backup:</strong> You can export all your transaction records to CSV spreadsheets or full JSON backup files at any time.</li>
+                    <li><strong>Instant Data Wiping:</strong> You can permanently delete all accounts, transactions, goals, and recurring obligations directly in the App under <strong>Settings → Database & Storage → Reset Database</strong>.</li>
+                    <li>Uninstalling the App permanently removes all locally stored application data from your device.</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>5. Children's Privacy (COPPA & GDPR-K)</h2>
+                <p><strong>FinMate: Expense & Budget</strong> does not knowingly collect or solicit personal information from children under the age of 13 (or under 16 in the European Union). If we discover that personal data of a minor has been collected, we will take immediate steps to delete it.</p>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>6. Security</h2>
+                <p>We implement industry-standard safeguards to protect your information:</p>
+                <ul>
+                    <li>Local database isolation in the private internal app sandbox.</li>
+                    <li>Salted SHA-256 password hashing for PIN protection.</li>
+                    <li>TLS/HTTPS encryption for any advertising and telemetry network traffic.</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>7. Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy periodically. Any revisions will be reflected on this page with an updated "Last Updated" date. We encourage you to review this page periodically.</p>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>8. Contact Us</h2>
+                <p>If you have questions, feedback, or concerns regarding this Privacy Policy or your data privacy, please contact:</p>
+                <ul>
+                    <li><strong>Developer:</strong> Anastasios Meresentzis</li>
+                    <li><strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a></li>
+                    <li><strong>Website:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a></li>
+                    <li><strong>Telegram:</strong> <a href="https://t.me/worldnewsreader" target="_blank">https://t.me/worldnewsreader</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>1. Συλλογή & Χρήση Δεδομένων</h2>
-            <p>Η εφαρμογή <strong>δεν</strong> συλλέγει, <strong>δεν</strong> αποθηκεύει σε εξωτερικούς διακομιστές (servers) και <strong>δεν</strong> διαβιβάζει σε τρίτους κανένα προσωπικό ή οικονομικό δεδομένο σας. Δεν απαιτείται εγγραφή (login), σύνδεση με τραπεζικούς λογαριασμούς ή εισαγωγή προσωπικών στοιχείων ταυτότητας.</p>
-        </div>
+        <!-- ==================================================================== -->
+        <!-- GREEK CONTENT (Ελληνική Έκδοση)                                      -->
+        <!-- ==================================================================== -->
+        <div id="content-el" class="lang-content">
+            <div class="header">
+                <div class="app-badge">🔒 Απόλυτο Απόρρητο (Offline-First)</div>
+                <h1>Πολιτική Απορρήτου - FinMate: Expense & Budget</h1>
+                <p class="meta-info">
+                    <strong>Τελευταία Ενημέρωση:</strong> 29 Σεπτεμβρίου 2026<br>
+                    <strong>Δημιουργός:</strong> Αναστάσιος Μερεσεντζής (MerPower)<br>
+                    <strong>Email Επικοινωνίας:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a><br>
+                    <strong>Ιστοσελίδα:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a>
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>2. Τοπική Αποθήκευση & Αντίγραφα Ασφαλείας (Backup)</h2>
-            <p>Όλες οι εγγραφές αποθηκεύονται στην τοπική κρυπτογραφημένη βάση δεδομένων της συσκευής σας (SQLite). Έχετε τον πλήρη έλεγχο των δεδομένων σας ανά πάσα στιγμή:</p>
-            <ul>
-                <li>Δυνατότητα εξαγωγής των συναλλαγών σας σε μορφή <strong>CSV</strong>.</li>
-                <li>Δημιουργία και επαναφορά τοπικών αρχείων αντιγράφων ασφαλείας (Backup).</li>
-                <li>Άμεση και οριστική διαγραφή όλων των δεδομένων από τις ρυθμίσεις της εφαρμογής.</li>
-            </ul>
-        </div>
+            <div class="highlight-box">
+                <p><strong>Το FinMate είναι σχεδιασμένο με φιλοσοφία Privacy-First και 100% Offline λειτουργία.</strong> Πιστεύουμε ότι τα προσωπικά σας οικονομικά δεδομένα ανήκουν αποκλειστικά σε εσάς. Δεν διατηρούμε εξωτερικούς διακομιστές (cloud servers) για την αποθήκευση των συναλλαγών ή των τραπεζικών σας στοιχείων.</p>
+            </div>
 
-        <div class="section">
-            <h2>3. Διαφημίσεις & Google Mobile Ads (AdMob)</h2>
-            <p>Η εφαρμογή χρησιμοποιεί το δίκτυο της <strong>Google Mobile Ads (AdMob)</strong> και <strong>Meta Audience Network</strong> για την προβολή μη παρεμβατικών διαφημίσεων. Η Google ενδέχεται να συλλέγει ανώνυμα αναγνωριστικά διαφήμισης (Advertising ID) σύμφωνα με την <a href="https://policies.google.com/privacy" target="_blank" style="color: #10B981;">Πολιτική Απορρήτου της Google</a>.</p>
-            <p>Για τους χρήστες εντός της Ευρωπαϊκής Ένωσης (GDPR), παρέχεται το επίσημο σύστημα <strong>Google User Messaging Platform (UMP)</strong>, με δυνατότητα επιλογής ή ανάκλησης της συγκατάθεσης ανά πάσα στιγμή μέσα από τις ρυθμίσεις.</p>
-        </div>
+            <div class="section">
+                <h2>1. Εισαγωγή</h2>
+                <p>Καλωσορίσατε στο <strong>FinMate: Expense & Budget</strong> («η Εφαρμογή», «εμείς», «μας»). Δεσμευόμαστε να προστατεύουμε το απόρρητό σας. Η παρούσα Πολιτική Απορρήτου εξηγεί τις πρακτικές μας σχετικά με τη συλλογή, χρήση και προστασία των πληροφοριών κατά τη χρήση της εφαρμογής σε συσκευές Android και iOS.</p>
+            </div>
 
-        <div class="section">
-            <h2>4. Αγορές Εντός Εφαρμογής (In-App Purchases)</h2>
-            <p>Οι αγορές για την αφαίρεση διαφημίσεων εκτελούνται με ασφάλεια μέσω του <strong>Google Play Billing</strong> και του <strong>RevenueCat</strong>. Δεν συλλέγουμε ούτε αποθηκεύουμε στοιχεία πιστωτικών καρτών ή τραπεζικά στοιχεία.</p>
-        </div>
+            <hr>
 
-        <div class="section">
-            <h2>5. Διαγνωστικά & Αναφορές Σφαλμάτων</h2>
-            <p>Χρησιμοποιούμε τις υπηρεσίες <strong>Firebase Crashlytics & Analytics</strong> αποκλειστικά για την ανίχνευση τεχνικών σφαλμάτων και τη βελτίωση της σταθερότητας της εφαρμογής.</p>
-        </div>
+            <div class="section">
+                <h2>2. Συλλογή & Αποθήκευση Δεδομένων</h2>
+                
+                <h3>2.1 100% Τοπική Αποθήκευση Οικονομικών Δεδομένων</h3>
+                <ul>
+                    <li><strong>Όλες οι οικονομικές εγγραφές</strong>—συμπεριλαμβανομένων των υπολοίπων, του ιστορικού συναλλαγών, των κατηγοριών, των υποχρεώσεων και των αποταμιευτικών στόχων—αποθηκεύονται <strong>αυστηρά τοπικά στη συσκευή σας</strong> σε ιδιωτική βάση δεδομένων SQLite.</li>
+                    <li><strong>Μηδενικός Συγχρονισμός στο Cloud:</strong> Δεν διατηρούμε απομακρυσμένους διακομιστές και δεν συγχρονίζουμε τις συναλλαγές σας σε καμία βάση δεδομένων στο διαδίκτυο.</li>
+                    <li><strong>Κανένα Τραπεζικό Στοιχείο:</strong> Η Εφαρμογή δεν συνδέεται με τραπεζικά APIs (Open Banking), δεν ζητά κωδικούς e-banking, αριθμούς καρτών ή PINs.</li>
+                </ul>
 
-        <div class="section">
-            <h2>6. Επικοινωνία</h2>
-            <p>Για οποιαδήποτε απορία σχετικά με την παρούσα Πολιτική Απορρήτου, επικοινωνήστε στο email: <strong style="color: #10B981;">anastasiosmeresentzes@gmail.com</strong>.</p>
+                <h3>2.2 Βιομετρικά Στοιχεία & Κλείδωμα Εφαρμογής</h3>
+                <ul>
+                    <li>Όταν ενεργοποιείτε το Κλείδωμα Εφαρμογής (PIN ή Βιομετρικό Ξεκλείδωμα), η ταυτοποίηση εκτελείται εξ ολοκλήρου από το hardware keystore του λειτουργικού συστήματος της συσκευής σας (<code>local_auth</code>).</li>
+                    <li>Δεν έχουμε ποτέ πρόσβαση ούτε αποθηκεύουμε το δακτυλικό σας αποτύπωμα ή δεδομένα προσώπου.</li>
+                    <li>Τα προσαρμοσμένα PINs κρυπτογραφούνται τοπικά με salted SHA-256 και δεν φεύγουν ποτέ από τη συσκευή σας.</li>
+                </ul>
+
+                <h3>2.3 Αυτοματοποιημένη Συλλογή Δεδομένων & SDKs Τρίτων</h3>
+                <p>Για τη συντήρηση και βελτίωση της εφαρμογής, ορισμένες βιβλιοθήκες τρίτων ενδέχεται να επεξεργάζονται ανώνυμα τεχνικά αναγνωριστικά:</p>
+                <ol>
+                    <li>
+                        <strong>Google Firebase Analytics:</strong>
+                        <ul>
+                            <li>Συλλέγει συγκεντρωτικά, μη ταυτοποιήσιμα διαγνωστικά συμβάντα (π.χ. προβολές οθονών, έκδοση εφαρμογής, μοντέλο συσκευής, έκδοση λειτουργικού) για τη διασφάλιση της σταθερότητας.</li>
+                            <li>Οικονομικά ποσά, σημειώσεις και τίτλοι συναλλαγών <strong>δεν</strong> καταγράφονται ποτέ στα analytics.</li>
+                            <li>Πολιτική Απορρήτου: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Google AdMob & Meta Audience Network (Mediation):</strong>
+                        <ul>
+                            <li>Προβάλλει διαφημίσεις για την υποστήριξη της δωρεάν διάθεσης της εφαρμογής.</li>
+                            <li>Τα διαφημιστικά αυτά δίκτυα ενδέχεται να χρησιμοποιούν ανωνυμοποιημένα αναγνωριστικά (π.χ. Google Advertising ID) σύμφωνα με το GDPR και τις πολιτικές του Google Play.</li>
+                            <li>Μπορείτε να απενεργοποιήσετε τις εξατομικευμένες διαφημίσεις από τις ρυθμίσεις της συσκευής σας ή να αποκτήσετε την έκδοση χωρίς διαφημίσεις (Ad-Free).</li>
+                            <li>Πολιτική Απορρήτου: <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>RevenueCat (Αγορές Εντός Εφαρμογής & Entitlements):</strong>
+                        <ul>
+                            <li>Χρησιμοποιούμε το RevenueCat για την ασφαλή διαχείριση της αφαίρεσης διαφημίσεων.</li>
+                            <li>Όλες οι πληρωμές εκτελούνται αποκλειστικά και με ασφάλεια από το **Google Play Billing** (σε Android) ή το **Apple In-App Purchases** (σε iOS). Δεν λαμβάνουμε ούτε αποθηκεύουμε τραπεζικά στοιχεία ή κάρτες.</li>
+                            <li>Πολιτική Απορρήτου: <a href="https://www.revenuecat.com/privacy/" target="_blank">https://www.revenuecat.com/privacy/</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>3. Άδειες Συσκευής (Permissions)</h2>
+                <p>Η Εφαρμογή ζητά μόνο τις ελάχιστες απαραίτητες άδειες για τη λειτουργία της:</p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Άδεια</th>
+                                <th>Σκοπός Χρήσης</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>POST_NOTIFICATIONS</code></td>
+                                <td>Αποκλειστικά για τον προγραμματισμό τοπικών ειδοποιήσεων υπενθύμισης λογαριασμών και υποχρεώσεων (100% τοπικά στη συσκευή).</td>
+                            </tr>
+                            <tr>
+                                <td><code>USE_BIOMETRIC</code> / <code>USE_FINGERPRINT</code></td>
+                                <td>Για την τοπική επιβεβαίωση της ταυτότητάς σας κατά το ξεκλείδωμα της εφαρμογής.</td>
+                            </tr>
+                            <tr>
+                                <td><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code></td>
+                                <td>Απαραίτητο αποκλειστικά για τη φόρτωση διαφημίσεων και ανώνυμων διαγνωστικών σφαλμάτων.</td>
+                            </tr>
+                            <tr>
+                                <td><code>SCHEDULE_EXACT_ALARM</code></td>
+                                <td>Απαιτείται σε Android 12+ για την ακριβή και έγκαιρη παράδοση των υπενθυμίσεων λογαριασμών.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>4. Διατήρηση, Εξαγωγή & Διαγραφή Δεδομένων</h2>
+                <ul>
+                    <li><strong>Έχετε τον απόλυτο έλεγχο των δεδομένων σας.</strong></li>
+                    <li><strong>Εξαγωγή σε CSV & Αντίγραφο Ασφαλείας (JSON):</strong> Μπορείτε να εξάγετε όλες τις συναλλαγές σας σε αρχεία CSV ή πλήρη αντίγραφα ασφαλείας οποιαδήποτε στιγμή.</li>
+                    <li><strong>Οριστική Διαγραφή Δεδομένων:</strong> Μπορείτε να διαγράψετε οριστικά όλους τους λογαριασμούς και τις συναλλαγές μέσα από την εφαρμογή: **Ρυθμίσεις → Βάση Δεδομένων & Αποθήκευση → Επαναφορά Βάσης Δεδομένων**.</li>
+                    <li>Η απεγκατάσταση της εφαρμογής διαγράφει άμεσα και οριστικά όλα τα τοπικά αποθηκευμένα δεδομένα.</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>5. Προστασία Ανηλίκων (COPPA & GDPR-K)</h2>
+                <p>Το <strong>FinMate: Expense & Budget</strong> δεν συλλέγει εν γνώσει του προσωπικά στοιχεία από παιδιά κάτω των 13 ετών (ή κάτω των 16 ετών στην Ευρωπαϊκή Ένωση). Εάν διαπιστωθεί τέτοια συλλογή, προχωράμε άμεσα στη διαγραφή τους.</p>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>6. Ασφάλεια</h2>
+                <p>Εφαρμόζουμε κορυφαία πρότυπα ασφαλείας για την προστασία των πληροφοριών σας:</p>
+                <ul>
+                    <li>Απομόνωση τοπικής βάσης δεδομένων στο ασφαλές sandbox της εφαρμογής.</li>
+                    <li>Κρυπτογράφηση κωδικών PIN με salted SHA-256.</li>
+                    <li>Κρυπτογράφηση TLS/HTTPS για κάθε δικτυακή επικοινωνία (διαφημίσεις/τηλεμετρία).</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>7. Αλλαγές στην Πολιτική Απορρήτου</h2>
+                <p>Ενδέχεται να ενημερώνουμε την παρούσα Πολιτική Απορρήτου ανά διαστήματα. Οποιεσδήποτε αλλαγές θα αναρτώνται σε αυτή τη σελίδα με ανανεωμένη ημερομηνία.</p>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>8. Επικοινωνία</h2>
+                <p>Για οποιαδήποτε ερώτηση, σχόλιο ή απορία σχετικά με την Πολιτική Απορρήτου, επικοινωνήστε μαζί μας:</p>
+                <ul>
+                    <li><strong>Δημιουργός:</strong> Αναστάσιος Μερεσεντζής</li>
+                    <li><strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a></li>
+                    <li><strong>Ιστοσελίδα:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a></li>
+                    <li><strong>Telegram:</strong> <a href="https://t.me/worldnewsreader" target="_blank">https://t.me/worldnewsreader</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 Finmate • Anastasios Meresentzis. All rights reserved.
+        &copy; 2026 FinMate: Expense & Budget • Anastasios Meresentzis (MerPower). All rights reserved.
     </footer>
+
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+
+            if (lang === 'el') {
+                document.getElementById('content-el').classList.add('active');
+                document.getElementById('btn-el').classList.add('active');
+                document.documentElement.lang = 'el';
+            } else {
+                document.getElementById('content-en').classList.add('active');
+                document.getElementById('btn-en').classList.add('active');
+                document.documentElement.lang = 'en';
+            }
+        }
+
+        // Auto-detect browser language on first load (defaulting to English if not Greek)
+        (function() {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang && userLang.toLowerCase().startsWith('el')) {
+                setLanguage('el');
+            } else {
+                setLanguage('en');
+            }
+        })();
+    </script>
 </body>
 </html>
