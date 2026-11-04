@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy – Ειδήσεις Τώρα - Ελληνικά Νέα</title>
+    <title>Πολιτική Απορρήτου / Privacy Policy – Ειδήσεις Τώρα - Ελληνικά Νέα</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
-            margin: 24px;
+            margin: 24px auto;
+            padding: 0 16px;
             color: #222;
-            max-width: 800px;
+            max-width: 820px;
         }
         h1, h2, h3 {
             color: #111;
@@ -22,110 +23,293 @@
         a:hover {
             text-decoration: underline;
         }
+        .lang-nav {
+            background: #f1f3f4;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .lang-nav a {
+            margin: 0 12px;
+            font-size: 16px;
+        }
         .highlight-box {
             background: #f1f3f4;
             border-left: 4px solid #1a73e8;
             padding: 12px 16px;
             margin: 16px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .trader-box {
+            background: #f8f9fa;
+            border: 1px solid #dadce0;
+            border-left: 4px solid #1a73e8;
+            padding: 14px 18px;
+            margin: 20px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        .trader-box h3 {
+            margin-top: 0;
+            color: #1a73e8;
+        }
+        code {
+            background: #e8eaed;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        hr.divider {
+            border: 0;
+            height: 2px;
+            background: #d1d5db;
+            margin: 48px 0;
         }
     </style>
 </head>
 <body>
 
-<h1>Privacy Policy</h1>
-<p><strong>Ειδήσεις Τώρα - Ελληνικά Νέα</strong></p>
-<p>Developer: <strong>Anastasios Meresentzis</strong></p>
-<p>Last updated: <strong>February 2026</strong></p>
-
-<p>
-This Privacy Policy describes how the mobile application
-<strong>Ειδήσεις Τώρα - Ελληνικά Νέα</strong> ("we", "our", or "the app")
-collects, uses, and protects information when you use the app.
-</p>
-
-<p>
-By using the app, you agree to the collection and use of information
-in accordance with this Privacy Policy.
-</p>
-
-<h2>1. Information We Collect</h2>
-
-<h3>a) Personal Information</h3>
-<p>
-If you choose to sign in via Google Sign-In / Firebase Authentication (for cloud sync features), we may collect your email address, display name, and unique user ID. Account creation is optional; you can use the core features of the app without signing in.
-</p>
-
-<h3>b) Automatically Collected Information</h3>
-<p>
-We may collect non-personal and diagnostic information automatically through third-party services, including:
-</p>
-<ul>
-    <li>Device identifiers (Advertising ID, Android ID, Firebase installation ID)</li>
-    <li>Device type, model, and operating system version</li>
-    <li>App performance, usage statistics, and crash logs</li>
-    <li>In-app purchase and subscription status</li>
-</ul>
-
-<h2>2. Third-Party Services</h2>
-<p>The app integrates with trusted third-party SDKs to provide essential features, advertising, and analytics:</p>
-
-<ul>
-    <li><strong>Google AdMob & Meta Audience Network:</strong> Used to display advertisements. They may use device identifiers to serve personalized or non-personalized ads based on user consent.</li>
-    <li><strong>Google Analytics for Firebase:</strong> Used to understand app usage patterns and improve performance.</li>
-    <li><strong>Firebase Crashlytics:</strong> Used to collect crash reports and diagnostics for app stability.</li>
-    <li><strong>Firebase Authentication & Cloud Firestore:</strong> Used to securely authenticate users and synchronize user preferences/favorites across devices.</li>
-    <li><strong>Firebase Cloud Messaging (FCM):</strong> Used to deliver optional breaking news push notifications.</li>
-    <li><strong>RevenueCat:</strong> Used to process and manage in-app subscriptions and purchases securely.</li>
-</ul>
-
-<h2>3. How We Use Information</h2>
-<ul>
-    <li>To operate, maintain, and provide cloud sync for the app</li>
-    <li>To analyze usage trends and improve user experience</li>
-    <li>To monitor stability and resolve bugs/crashes</li>
-    <li>To display advertisements and manage premium subscriptions</li>
-</ul>
-
-<h2>4. Data Sharing</h2>
-<p>
-We do not sell or rent user data. Information is shared only with our trusted service providers (Google, Meta, RevenueCat) as necessary to operate the services mentioned above, or with legal authorities when required by law.
-</p>
-
-<h2>5. Account & Data Deletion (User Rights)</h2>
-<div class="highlight-box">
-    <h3>How to Request Account & Data Deletion</h3>
-    <p>
-    Users have the right to request the complete deletion of their account and all associated data at any time.
-    </p>
-    <p><strong>Steps to request deletion:</strong></p>
-    <ol>
-        <li>Send an email to <a href="mailto:anastasiosmeresentzes@gmail.com?subject=World%20News%20Reader%20-%20Account%20Deletion%20Request">anastasiosmeresentzes@gmail.com</a>.</li>
-        <li>Use the subject line: <code>Ειδήσεις Τώρα - Account Deletion Request</code>.</li>
-        <li>Include your registered email address or user ID in the email body.</li>
-    </ol>
-    <p>
-    <strong>What happens next:</strong> Upon receiving your request, we will permanently delete your authentication record, saved favorites, and cloud data within 30 days. Anonymous crash logs and aggregated analytics that cannot identify you may be retained for security and debugging purposes.
-    </p>
+<!-- Γρήγορη πλοήγηση γλώσσας -->
+<div class="lang-nav">
+    <span>🌐 Επιλογή Γλώσσας / Select Language:</span>
+    <a href="#greek">🇬🇷 Ελληνικά</a> |
+    <a href="#english">🇬🇧 English</a>
 </div>
 
-<h2>6. Children’s Privacy</h2>
-<p>
-This app is not intended for children under the age of 13. We do not knowingly collect personal data from children. If you believe that a child has provided personal data, please contact us and we will delete it immediately.
-</p>
+<!-- ========================================== -->
+<!--            ΕΛΛΗΝΙΚΗ ΕΚΔΟΣΗ                -->
+<!-- ========================================== -->
+<section id="greek">
+    <h1>Πολιτική Απορρήτου</h1>
+    <p><strong>Εφαρμογή:</strong> Ειδήσεις Τώρα - Ελληνικά Νέα</p>
+    <p><strong>Προγραμματιστής & Έμπορος (Trader):</strong> Αναστάσιος Μερεσεντζής (Anastasios Meresentzis)</p>
+    <p><strong>Τελευταία ενημέρωση:</strong> Νοέμβριος 2026</p>
 
-<h2>7. Security</h2>
-<p>
-All data transmitted between the app and external services is encrypted in transit using standard HTTPS/TLS protocols.
-</p>
+    <p>
+    Η παρούσα Πολιτική Απορρήτου περιγράφει τον τρόπο με τον οποίο η εφαρμογή για κινητές συσκευές 
+    <strong>Ειδήσεις Τώρα - Ελληνικά Νέα</strong> («εμείς», «μας» ή «η εφαρμογή») συλλέγει, 
+    χρησιμοποιεί και προστατεύει τις πληροφορίες σας κατά τη χρήση της.
+    </p>
 
-<h2>8. Contact Us</h2>
-<p>
-If you have any questions or requests regarding this Privacy Policy, please contact:
-</p>
-<p>
-<strong>Anastasios Meresentzis</strong><br>
-<strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a>
-</p>
+    <p>
+    Χρησιμοποιώντας την εφαρμογή, συμφωνείτε με τη συλλογή και τη χρήση πληροφοριών σύμφωνα με την παρούσα πολιτική.
+    </p>
+
+    <!-- Στοιχεία Εμπόρου (DSA) -->
+    <div class="trader-box">
+        <h3>Στοιχεία Εμπόρου (Ευρωπαϊκός Κανονισμός για τις Ψηφιακές Υπηρεσίες - DSA)</h3>
+        <p>
+        Σύμφωνα με το Άρθρο 30 του Κανονισμού για τις Ψηφιακές Υπηρεσίες (Digital Services Act - DSA) της Ευρωπαϊκής Ένωσης και τις απαιτήσεις επαλήθευσης εμπόρου του Google Play, ο προγραμματιστής λειτουργεί ως επίσημα εγγεγραμμένος έμπορος:
+        </p>
+        <p>
+            <strong>Ονοματεπώνυμο / Έμπορος:</strong> Αναστάσιος Μερεσεντζής (ΜΕΡΕΣΕΝΤΖΗΣ ΑΝΑΣΤΑΣΙΟΣ)<br>
+            <strong>Διεύθυνση:</strong> Ιουστινιάνη 32, Χίος - 82100, Ελλάδα (GR)<br>
+            <strong>Τηλέφωνο:</strong> <a href="tel:+306972684675">+30 6972684675</a><br>
+            <strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a>
+        </p>
+    </div>
+
+    <h2>1. Πληροφορίες που Συλλέγουμε</h2>
+
+    <h3>α) Προσωπικές Πληροφορίες</h3>
+    <p>
+    Εάν επιλέξετε να συνδεθείτε μέσω Google Sign-In / Firebase Authentication (για λειτουργίες συγχρονισμού στο cloud), ενδέχεται να συλλέξουμε τη διεύθυνση email σας, το όνομα εμφάνισης και το μοναδικό αναγνωριστικό χρήστη (User ID). Η δημιουργία λογαριασμού είναι εντελώς προαιρετική· μπορείτε να περιηγηθείτε στις ειδήσεις, να διαβάσετε άρθρα και να χρησιμοποιήσετε τις βασικές λειτουργίες RSS της εφαρμογής χωρίς καμία σύνδεση.
+    </p>
+
+    <h3>β) Πληροφορίες που Συλλέγονται Αυτόματα</h3>
+    <p>
+    Ενδέχεται να συλλέγουμε μη προσωπικές και διαγνωστικές πληροφορίες αυτόματα μέσω υπηρεσιών τρίτων, όπως:
+    </p>
+    <ul>
+        <li>Αναγνωριστικά συσκευής (Advertising ID, Android ID, αναγνωριστικό εγκατάστασης Firebase)</li>
+        <li>Τύπο συσκευής, μοντέλο και έκδοση λειτουργικού συστήματος</li>
+        <li>Στατιστικά χρήσης, μετρήσεις απόδοσης και αναφορές σφαλμάτων (crash logs)</li>
+        <li>Κατάσταση αγορών και συνδρομών εντός εφαρμογής</li>
+    </ul>
+
+    <h2>2. Υπηρεσίες Τρίτων</h2>
+    <p>Η εφαρμογή ενσωματώνει αξιόπιστα SDKs τρίτων για την παροχή βασικών λειτουργιών, διαφημίσεων και στατιστικών:</p>
+
+    <ul>
+        <li><strong>Google AdMob & Meta Audience Network:</strong> Χρησιμοποιούνται για την προβολή διαφημίσεων. Ενδέχεται να χρησιμοποιούν αναγνωριστικά συσκευής για την προβολή εξατομικευμένων ή μη εξατομικευμένων διαφημίσεων βάσει της συγκατάθεσης του χρήστη (πλήρως συμβατό με τον GDPR και το πλαίσιο Google UMP).</li>
+        <li><strong>Google Analytics for Firebase:</strong> Χρησιμοποιείται για την κατανόηση των προτύπων χρήσης και τη βελτίωση της εφαρμογής.</li>
+        <li><strong>Firebase Crashlytics:</strong> Συλλέγει αναφορές καταρρεύσεων και διαγνωστικά για τη σταθερότητα της εφαρμογής.</li>
+        <li><strong>Firebase Authentication & Cloud Firestore:</strong> Χρησιμοποιούνται για την ασφαλή ταυτοποίηση χρηστών και τον συγχρονισμό αγαπημένων και προτιμήσεων μεταξύ συσκευών.</li>
+        <li><strong>Firebase Cloud Messaging (FCM):</strong> Παρέχει προαιρετικές ειδοποιήσεις έκτακτων ειδήσεων (push notifications).</li>
+        <li><strong>RevenueCat:</strong> Χρησιμοποιείται για την ασφαλή επεξεργασία και διαχείριση των συνδρομών και αγορών εντός εφαρμογής.</li>
+    </ul>
+
+    <h2>3. Πώς Χρησιμοποιούμε τις Πληροφορίες</h2>
+    <ul>
+        <li>Για τη λειτουργία, συντήρηση και παροχή συγχρονισμού στο cloud</li>
+        <li>Για την ανάλυση τάσεων χρήσης και τη βελτίωση της εμπειρίας των χρηστών</li>
+        <li>Για την παρακολούθηση της σταθερότητας και την επίλυση τεχνικών σφαλμάτων</li>
+        <li>Για την προβολή διαφημίσεων και τη διαχείριση premium συνδρομών</li>
+    </ul>
+
+    <h2>4. Κοινοποίηση Δεδομένων</h2>
+    <p>
+    Δεν πωλούμε ούτε ενοικιάζουμε δεδομένα χρηστών. Οι πληροφορίες κοινοποιούνται μόνο στους αξιόπιστους παρόχους υπηρεσιών μας (Google, Meta, RevenueCat) αποκλειστικά στον βαθμό που είναι απαραίτητο για τη λειτουργία των παραπάνω υπηρεσιών, ή με τις αρμόδιες αρχές όταν απαιτείται από τον νόμο.
+    </p>
+
+    <h2>5. Διαγραφή Λογαριασμού & Δεδομένων (Δικαιώματα Χρηστών)</h2>
+    <div class="highlight-box">
+        <h3>Πώς να Ζητήσετε Διαγραφή Λογαριασμού & Δεδομένων</h3>
+        <p>
+        Οι χρήστες έχουν το δικαίωμα να ζητήσουν την πλήρη και οριστική διαγραφή του λογαριασμού τους και όλων των σχετικών δεδομένων ανά πάσα στιγμή.
+        </p>
+        <p><strong>Βήματα για αίτημα διαγραφής:</strong></p>
+        <ol>
+            <li>Στείλτε email στο <a href="mailto:anastasiosmeresentzes@gmail.com?subject=%CE%95%CE%B9%CE%B4%CE%AE%CF%83%CE%B5%CE%B9%CF%82%20%CE%A4%CF%8E%CF%81%CE%B1%20-%20Account%20Deletion%20Request">anastasiosmeresentzes@gmail.com</a>.</li>
+            <li>Χρησιμοποιήστε ως θέμα: <code>Ειδήσεις Τώρα - Account Deletion Request</code>.</li>
+            <li>Συμπεριλάβετε στο κείμενο του email το εγγεγραμμένο email σας ή το User ID σας.</li>
+        </ol>
+        <p>
+        <strong>Τι ακολουθεί:</strong> Μόλις λάβουμε το αίτημά σας, θα διαγράψουμε οριστικά τα στοιχεία ταυτοποίησής σας, τα αποθηκευμένα αγαπημένα και όλα τα δεδομένα cloud εντός 30 ημερών. Ανώνυμα αρχεία καταγραφής σφαλμάτων και συγκεντρωτικά στατιστικά που δεν μπορούν να σας ταυτοποιήσουν ενδέχεται να διατηρηθούν αποκλειστικά για λόγους ασφαλείας και επίλυσης σφαλμάτων.
+        </p>
+    </div>
+
+    <h2>6. Απόρρητο Ανηλίκων</h2>
+    <p>
+    Η εφαρμογή δεν απευθύνεται σε παιδιά κάτω των 13 ετών. Δεν συλλέγουμε εν γνώσει μας προσωπικά δεδομένα από παιδιά. Εάν διαπιστώσετε ότι ένα παιδί μάς έχει παράσχει προσωπικά δεδομένα, επικοινωνήστε μαζί μας και θα τα διαγράψουμε άμεσα.
+    </p>
+
+    <h2>7. Ασφάλεια</h2>
+    <p>
+    Όλα τα δεδομένα που μεταδίδονται μεταξύ της εφαρμογής και των εξωτερικών υπηρεσιών είναι κρυπτογραφημένα κατά τη μεταφορά με χρήση τυπικών πρωτοκόλλων HTTPS/TLS.
+    </p>
+
+    <h2>8. Επικοινωνία & Στοιχεία Εμπόρου</h2>
+    <p>
+    Εάν έχετε οποιαδήποτε ερώτηση ή αίτημα σχετικά με την παρούσα Πολιτική Απορρήτου, παρακαλούμε επικοινωνήστε απευθείας με τον υπεύθυνο επεξεργασίας:
+    </p>
+    <p>
+    <strong>Αναστάσιος Μερεσεντζής (ΜΕΡΕΣΕΝΤΖΗΣ ΑΝΑΣΤΑΣΙΟΣ)</strong><br>
+    <strong>Διεύθυνση:</strong> Ιουστινιάνη 32, Χίος - 82100, Ελλάδα (GR)<br>
+    <strong>Τηλέφωνο:</strong> <a href="tel:+306972684675">+30 6972684675</a><br>
+    <strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a>
+    </p>
+</section>
+
+<hr class="divider">
+
+<!-- ========================================== -->
+<!--            ENGLISH VERSION                 -->
+<!-- ========================================== -->
+<section id="english">
+    <h1>Privacy Policy</h1>
+    <p><strong>App:</strong> Ειδήσεις Τώρα - Ελληνικά Νέα</p>
+    <p><strong>Developer & Trader:</strong> Anastasios Meresentzis (ΜΕΡΕΣΕΝΤΖΗΣ ΑΝΑΣΤΑΣΙΟΣ)</p>
+    <p><strong>Last updated:</strong> November 2026</p>
+
+    <p>
+    This Privacy Policy describes how the mobile application
+    <strong>Ειδήσεις Τώρα - Ελληνικά Νέα</strong> ("we", "our", or "the app")
+    collects, uses, and protects information when you use the app.
+    </p>
+
+    <p>
+    By using the app, you agree to the collection and use of information
+    in accordance with this Privacy Policy.
+    </p>
+
+    <!-- Trader Identification (EU Digital Services Act - DSA) -->
+    <div class="trader-box">
+        <h3>Trader Identification (EU Digital Services Act)</h3>
+        <p>
+        In compliance with the European Union Digital Services Act (DSA) and Google Play Trader verification requirements, the developer operates as a registered trader:
+        </p>
+        <p>
+            <strong>Legal Name / Trader:</strong> Anastasios Meresentzis (ΜΕΡΕΣΕΝΤΖΗΣ ΑΝΑΣΤΑΣΙΟΣ)<br>
+            <strong>Address:</strong> Ioustiniani 32, Chios, 82100, Greece (Ιουστινιάνη 32, Χίος - 82100, Ελλάδα)<br>
+            <strong>Phone:</strong> <a href="tel:+306972684675">+30 6972684675</a><br>
+            <strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a><br>
+            <strong>Country:</strong> Greece (GR) – European Union
+        </p>
+    </div>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>a) Personal Information</h3>
+    <p>
+    If you choose to sign in via Google Sign-In / Firebase Authentication (for cloud sync features), we may collect your email address, display name, and unique user ID. Account creation is optional; you can browse news, read articles, and use the core RSS features of the app without signing in.
+    </p>
+
+    <h3>b) Automatically Collected Information</h3>
+    <p>
+    We may collect non-personal and diagnostic information automatically through third-party services, including:
+    </p>
+    <ul>
+        <li>Device identifiers (Advertising ID, Android ID, Firebase installation ID)</li>
+        <li>Device type, model, and operating system version</li>
+        <li>App performance, usage statistics, and crash logs</li>
+        <li>In-app purchase and subscription status</li>
+    </ul>
+
+    <h2>2. Third-Party Services</h2>
+    <p>The app integrates with trusted third-party SDKs to provide essential features, advertising, and analytics:</p>
+
+    <ul>
+        <li><strong>Google AdMob & Meta Audience Network:</strong> Used to display advertisements. They may use device identifiers to serve personalized or non-personalized ads based on user consent (fully compliant with GDPR & Google UMP).</li>
+        <li><strong>Google Analytics for Firebase:</strong> Used to understand app usage patterns and improve performance.</li>
+        <li><strong>Firebase Crashlytics:</strong> Used to collect crash reports and diagnostics for app stability.</li>
+        <li><strong>Firebase Authentication & Cloud Firestore:</strong> Used to securely authenticate users and synchronize user preferences/favorites across devices.</li>
+        <li><strong>Firebase Cloud Messaging (FCM):</strong> Used to deliver optional breaking news push notifications.</li>
+        <li><strong>RevenueCat:</strong> Used to process and manage in-app subscriptions and purchases securely.</li>
+    </ul>
+
+    <h2>3. How We Use Information</h2>
+    <ul>
+        <li>To operate, maintain, and provide cloud sync for the app</li>
+        <li>To analyze usage trends and improve user experience</li>
+        <li>To monitor stability and resolve bugs/crashes</li>
+        <li>To display advertisements and manage premium subscriptions</li>
+    </ul>
+
+    <h2>4. Data Sharing</h2>
+    <p>
+    We do not sell or rent user data. Information is shared only with our trusted service providers (Google, Meta, RevenueCat) as necessary to operate the services mentioned above, or with legal authorities when required by law.
+    </p>
+
+    <h2>5. Account & Data Deletion (User Rights)</h2>
+    <div class="highlight-box">
+        <h3>How to Request Account & Data Deletion</h3>
+        <p>
+        Users have the right to request the complete deletion of their account and all associated data at any time.
+        </p>
+        <p><strong>Steps to request deletion:</strong></p>
+        <ol>
+            <li>Send an email to <a href="mailto:anastasiosmeresentzes@gmail.com?subject=%CE%95%CE%B9%CE%B4%CE%AE%CF%83%CE%B5%CE%B9%CF%82%20%CE%A4%CF%8E%CF%81%CE%B1%20-%20Account%20Deletion%20Request">anastasiosmeresentzes@gmail.com</a>.</li>
+            <li>Use the subject line: <code>Ειδήσεις Τώρα - Account Deletion Request</code>.</li>
+            <li>Include your registered email address or user ID in the email body.</li>
+        </ol>
+        <p>
+        <strong>What happens next:</strong> Upon receiving your request, we will permanently delete your authentication record, saved favorites, and cloud data within 30 days. Anonymous crash logs and aggregated analytics that cannot identify you may be retained for security and debugging purposes.
+        </p>
+    </div>
+
+    <h2>6. Children’s Privacy</h2>
+    <p>
+    This app is not intended for children under the age of 13. We do not knowingly collect personal data from children. If you believe that a child has provided personal data, please contact us and we will delete it immediately.
+    </p>
+
+    <h2>7. Security</h2>
+    <p>
+    All data transmitted between the app and external services is encrypted in transit using standard HTTPS/TLS protocols.
+    </p>
+
+    <h2>8. Contact Us & Trader Details</h2>
+    <p>
+    If you have any questions or requests regarding this Privacy Policy, please contact the Data Controller directly:
+    </p>
+    <p>
+    <strong>Anastasios Meresentzis (ΜΕΡΕΣΕΝΤΖΗΣ ΑΝΑΣΤΑΣΙΟΣ)</strong><br>
+    <strong>Address:</strong> Ιουστινιάνη 32, Χίος - 82100, Greece (GR)<br>
+    <strong>Phone:</strong> <a href="tel:+306972684675">+30 6972684675</a><br>
+    <strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a>
+    </p>
+</section>
 
 </body>
-</html> 
+</html>
