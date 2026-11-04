@@ -3,909 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy & Terms of Service - FinMate: Expense & Budget</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Privacy Policy - My Notes - Notepad & Checklist</title>
     <style>
         :root {
-            --bg-gradient: linear-gradient(135deg, #070B12 0%, #0F172A 50%, #040810 100%);
-            --card-bg: rgba(30, 41, 59, 0.85);
-            --card-border: rgba(255, 255, 255, 0.14);
-            --primary-emerald: #10B981;
-            --primary-glow: rgba(16, 185, 129, 0.25);
-            --text-main: #FFFFFF;
-            --text-secondary: #E2E8F0;
-            --text-muted: #CBD5E1;
-            --table-header: rgba(16, 185, 129, 0.22);
-            --table-border: rgba(255, 255, 255, 0.12);
+            --bg-color: #0F172A;
+            --card-bg: #1E293B;
+            --text-color: #F8FAFC;
+            --text-muted: #94A3B8;
+            --primary: #6366F1;
+            --border: #334155;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
         body {
-            background: var(--bg-gradient);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.65;
+            padding: 24px;
+            margin: 0;
         }
-
         .container {
-            max-width: 860px;
-            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
             background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 28px;
-            padding: 44px 36px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 40px var(--primary-glow);
-            animation: fadeIn 0.6s ease-out;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(16px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Top Navigation Bar: Doc Tabs + Language Switch */
-        .top-nav {
+        h1 {
+            color: #FFFFFF;
+            margin-top: 0;
+            font-size: 1.85rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 12px;
-            margin-bottom: 28px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
         }
-
-        .doc-tabs, .lang-switch {
-            display: inline-flex;
-            background: rgba(15, 23, 42, 0.90);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 20px;
-            padding: 4px;
-            gap: 4px;
-        }
-
-        .tab-btn, .lang-btn {
-            background: transparent;
-            border: none;
-            color: #94A3B8;
-            padding: 8px 16px;
-            border-radius: 16px;
-            font-size: 0.90rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .tab-btn.active, .lang-btn.active {
-            background: var(--primary-emerald);
-            color: #FFFFFF;
-            box-shadow: 0 2px 10px rgba(16, 185, 129, 0.45);
-        }
-
-        .tab-btn:hover:not(.active), .lang-btn:hover:not(.active) {
-            color: #FFFFFF;
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 32px;
-            border-bottom: 1px solid var(--card-border);
-            padding-bottom: 24px;
-        }
-
-        .app-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            background: rgba(16, 185, 129, 0.18);
-            border: 1px solid rgba(16, 185, 129, 0.45);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #34D399;
-            margin-bottom: 16px;
-            letter-spacing: 0.4px;
-        }
-
-        h1 {
-            font-size: 2.15rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-            color: #FFFFFF;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-            letter-spacing: -0.5px;
-            line-height: 1.25;
-        }
-
-        .meta-info {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.8;
-        }
-
-        .meta-info strong {
-            color: #FFFFFF;
-        }
-
-        .meta-info a {
-            color: #34D399;
-            font-weight: 600;
-            text-decoration: underline;
-            transition: opacity 0.2s;
-        }
-
-        .highlight-box {
-            background: rgba(16, 185, 129, 0.12);
-            border: 1.5px solid rgba(16, 185, 129, 0.40);
-            border-radius: 16px;
-            padding: 20px 24px;
-            margin: 24px 0;
-        }
-
-        .highlight-box p {
-            color: #FFFFFF;
-            font-size: 0.98rem;
-            line-height: 1.7;
-            margin-bottom: 0;
-            font-weight: 500;
-        }
-
-        .warning-box {
-            background: rgba(244, 63, 94, 0.10);
-            border: 1.5px solid rgba(244, 63, 94, 0.35);
-            border-radius: 16px;
-            padding: 20px 24px;
-            margin: 24px 0;
-        }
-
-        .warning-box p {
-            color: #FFFFFF;
-            font-size: 0.98rem;
-            line-height: 1.7;
-            margin-bottom: 0;
-            font-weight: 500;
-        }
-
-        .trader-box {
-            background: rgba(99, 102, 241, 0.12);
-            border: 1.5px solid rgba(99, 102, 241, 0.40);
-            border-radius: 16px;
-            padding: 20px 24px;
-            margin: 24px 0;
-        }
-
-        .trader-box h3 {
-            color: #A5B4FC;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.10rem;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
         h2 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            letter-spacing: -0.3px;
+            color: #E2E8F0;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-top: 32px;
+            font-size: 1.3rem;
         }
-
         h3 {
-            font-size: 1.10rem;
-            font-weight: 700;
-            color: #34D399;
-            margin: 16px 0 8px 0;
+            color: #CBD5E1;
+            margin-top: 20px;
+            font-size: 1.1rem;
         }
-
-        p {
-            font-size: 0.98rem;
-            line-height: 1.75;
-            color: var(--text-secondary);
-            margin-bottom: 12px;
+        p, li {
+            color: #CBD5E1;
         }
-
-        ul, ol {
-            margin-left: 24px;
-            margin-bottom: 14px;
-            color: var(--text-secondary);
-            font-size: 0.98rem;
-            line-height: 1.75;
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
         }
-
+        .badge {
+            background: rgba(99, 102, 241, 0.2);
+            color: #A5B4FC;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .trader-badge {
+            background: rgba(45, 212, 191, 0.15);
+            color: #5EEAD4;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        a {
+            color: #818CF8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
         li {
             margin-bottom: 8px;
         }
-
-        li strong {
-            color: #FFFFFF;
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
         }
-
-        a {
-            color: #34D399;
-            font-weight: 600;
-            text-decoration: underline;
-        }
-
-        a:hover {
-            color: #6EE7B7;
-        }
-
-        code {
-            background: rgba(255, 255, 255, 0.12);
-            padding: 2px 7px;
-            border-radius: 6px;
-            font-family: ui-monospace, SFMono-Regular, monospace;
-            font-size: 0.90em;
-            color: #A7F3D0;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        /* Permissions Table */
-        .table-responsive {
-            overflow-x: auto;
-            margin: 16px 0 20px 0;
-            border-radius: 14px;
-            border: 1px solid var(--table-border);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.92rem;
-            text-align: left;
-        }
-
-        th {
-            background: var(--table-header);
-            color: #FFFFFF;
-            font-weight: 700;
-            padding: 14px 16px;
-            border-bottom: 1px solid var(--table-border);
-            letter-spacing: 0.3px;
-        }
-
-        td {
-            padding: 14px 16px;
-            border-bottom: 1px solid var(--table-border);
-            color: var(--text-secondary);
-            line-height: 1.65;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        tr:nth-child(even) {
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        hr {
-            border: none;
-            height: 1px;
-            background: var(--card-border);
-            margin: 28px 0;
-        }
-
-        footer {
-            margin-top: 36px;
-            text-align: center;
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* Dynamic Visibility */
-        .doc-section {
-            display: none;
-        }
-        .doc-section.active {
-            display: block;
-        }
-
-        .lang-content {
-            display: none;
-        }
-        .lang-content.active {
-            display: block;
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding: 30px 18px;
-                border-radius: 20px;
-            }
-            .top-nav {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .doc-tabs, .lang-switch {
-                justify-content: center;
-            }
-            h1 {
-                font-size: 1.65rem;
-            }
-            h2 {
-                font-size: 1.15rem;
-            }
+        .trader-box {
+            background: rgba(45, 212, 191, 0.08);
+            border-left: 4px solid #2DD4BF;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Top Navigation Bar: Document Tabs & Language Switcher -->
-        <div class="top-nav">
-            <div class="doc-tabs">
-                <button type="button" class="tab-btn active" id="tab-privacy" onclick="setDocument('privacy')">🔒 <span class="tab-label-privacy">Privacy Policy</span></button>
-                <button type="button" class="tab-btn" id="tab-terms" onclick="setDocument('terms')">📜 <span class="tab-label-terms">Terms of Service</span></button>
-            </div>
+        <h1>My Notes - Notepad & Checklist <span class="badge">Privacy Policy</span> <span class="trader-badge">Trader Verified</span></h1>
+        <div class="last-updated"><strong>Last updated:</strong> November 4, 2026</div>
 
-            <div class="lang-switch">
-                <button type="button" class="lang-btn active" id="btn-en" onclick="setLanguage('en')">🇬🇧 English</button>
-                <button type="button" class="lang-btn" id="btn-el" onclick="setLanguage('el')">🇬🇷 Ελληνικά</button>
-            </div>
+        <p>This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information when you use <strong>My Notes - Notepad & Checklist</strong> (the "Application" or "Service"), and explains your privacy rights and how the law protects you.</p>
+
+        <div class="highlight-box">
+            <strong>Privacy-First Architecture:</strong> My Notes is designed so that your personal notes, checklists, voice recordings, and attachments remain strictly under your control on your device unless you explicitly choose to back them up to your Google Drive or share them with peers.
         </div>
 
-        <!-- ==================================================================== -->
-        <!-- DOCUMENT 1: PRIVACY POLICY                                          -->
-        <!-- ==================================================================== -->
-        <div id="doc-privacy" class="doc-section active">
-            
-            <!-- ENGLISH PRIVACY POLICY -->
-            <div id="privacy-en" class="lang-content active">
-                <div class="header">
-                    <div class="app-badge">🔒 Privacy-First Architecture</div>
-                    <h1>Privacy Policy for FinMate: Expense & Budget</h1>
-                    <p class="meta-info">
-                        <strong>Last Updated:</strong> November 2026<br>
-                        <strong>Developer:</strong> Anastasios Meresentzis (MerPower)<br>
-                        <strong>Contact Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a><br>
-                        <strong>Website:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a>
-                    </p>
-                </div>
-
-                <div class="highlight-box">
-                    <p><strong>FinMate is designed with a Privacy-First, 100% Offline philosophy.</strong> We believe your personal financial data belongs solely to you. We do not operate cloud servers storing your financial records, transactions, or banking credentials.</p>
-                </div>
-
-                <div class="section">
-                    <h2>1. Introduction</h2>
-                    <p>Welcome to <strong>FinMate: Expense & Budget</strong> ("the App", "we", "us", or "our"). We are committed to protecting your privacy. This Privacy Policy explains our practices regarding the collection, use, disclosure, and protection of information when you use our mobile application.</p>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>2. Information Collection and Storage</h2>
-                    <h3>2.1 100% Local Financial Data Storage</h3>
-                    <ul>
-                        <li><strong>All financial records</strong>—including account balances, transaction history, expense categories, recurring obligations, and savings goals—are stored <strong>strictly locally on your device</strong> in a private SQLite database.</li>
-                        <li><strong>Zero Cloud Sync of Financial Data:</strong> We do not operate remote financial servers or synchronize your personal transactions to any cloud database.</li>
-                        <li><strong>No Banking Credentials:</strong> The App does not connect to Open Banking APIs, scrape bank websites, or request banking passwords, card numbers, or PINs.</li>
-                    </ul>
-
-                    <h3>2.2 Biometric & App Lock Data</h3>
-                    <ul>
-                        <li>Authentication is handled entirely by your device’s local operating system keystore (<code>local_auth</code>).</li>
-                        <li>We never have access to, collect, or transmit your fingerprint, face data, or biometric templates.</li>
-                        <li>Custom PINs are hashed locally using salted SHA-256 and never leave your device.</li>
-                    </ul>
-
-                    <h3>2.3 Automated Data Collection & Third-Party SDKs</h3>
-                    <p>Certain third-party libraries may process limited, pseudonymous technical identifiers:</p>
-                    <ol>
-                        <li>
-                            <strong>Google Firebase Analytics:</strong>
-                            <ul>
-                                <li>Collects aggregated diagnostic events (screen views, OS version, app crashes) to improve stability. Financial figures and note contents are <strong>never</strong> logged.</li>
-                                <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Google AdMob & Meta Audience Network:</strong>
-                            <ul>
-                                <li>Displays advertisements to support the free version in compliance with GDPR.</li>
-                                <li>Privacy Policy: <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>RevenueCat (In-App Purchases):</strong>
-                            <ul>
-                                <li>Processes in-app purchases (e.g. permanent Ad-Removal) securely via <strong>Google Play Billing</strong>. We never receive or store your card or bank details.</li>
-                                <li>Privacy Policy: <a href="https://www.revenuecat.com/privacy/" target="_blank">https://www.revenuecat.com/privacy/</a></li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>3. Device Permissions</h2>
-                    <div class="table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Permission</th>
-                                    <th>Purpose</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>POST_NOTIFICATIONS</code></td>
-                                    <td>Used strictly for scheduled local notifications to remind you of upcoming bills and payday alerts. Notifications are generated 100% locally.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>USE_BIOMETRIC</code> / <code>USE_FINGERPRINT</code></td>
-                                    <td>Used to verify your identity locally when unlocking the App.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code></td>
-                                    <td>Required exclusively for loading advertisements and anonymous crash/analytics telemetry.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>SCHEDULE_EXACT_ALARM</code></td>
-                                    <td>Required on Android 12+ to deliver precise, on-time bill reminder notifications.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>4. Data Retention, Export & Deletion</h2>
-                    <ul>
-                        <li><strong>Local CSV & JSON Backup:</strong> You can export all your transactions to CSV spreadsheets or full JSON backup files at any time.</li>
-                        <li><strong>Instant Data Wiping:</strong> You can permanently delete all accounts and transactions directly in the App under <strong>Settings → Database & Storage → Reset Database</strong>.</li>
-                        <li>Uninstalling the App permanently removes all locally stored application data.</li>
-                    </ul>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>5. Children's Privacy & Security</h2>
-                    <p>FinMate does not knowingly collect personal information from children under 13 (or under 16 in the EU). We apply local sandbox isolation, salted SHA-256 PIN hashing, and TLS/HTTPS network encryption.</p>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>6. Trader Information & Contact (EU Digital Services Act)</h2>
-                    <div class="trader-box">
-                        <h3>🇪🇺 European Economic Area (EEA) Trader Identification</h3>
-                        <p>Under the European Union Digital Services Act (DSA), the trader details for FinMate are:</p>
-                        <ul>
-                            <li><strong>Trader / Developer Name:</strong> Anastasios Meresentzis (MerPower)</li>
-                            <li><strong>Registered Address:</strong> 32 Ioustiniani St., Chios - 82100, Greece (GR)</li>
-                            <li><strong>Telephone:</strong> <a href="tel:+306972684675">+30 697 268 4675</a></li>
-                            <li><strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a></li>
-                            <li><strong>Website:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a></li>
-                            <li><strong>Telegram Support:</strong> <a href="https://t.me/worldnewsreader" target="_blank">https://t.me/worldnewsreader</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GREEK PRIVACY POLICY -->
-            <div id="privacy-el" class="lang-content">
-                <div class="header">
-                    <div class="app-badge">🔒 Απόλυτο Απόρρητο (Offline-First)</div>
-                    <h1>Πολιτική Απορρήτου - FinMate: Expense & Budget</h1>
-                    <p class="meta-info">
-                        <strong>Τελευταία Ενημέρωση:</strong> Νοέμβριος 2026<br>
-                        <strong>Δημιουργός:</strong> Αναστάσιος Μερεσεντζής (MerPower)<br>
-                        <strong>Email Επικοινωνίας:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a><br>
-                        <strong>Ιστοσελίδα:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a>
-                    </p>
-                </div>
-
-                <div class="highlight-box">
-                    <p><strong>Το FinMate είναι σχεδιασμένο με φιλοσοφία Privacy-First και 100% Offline λειτουργία.</strong> Πιστεύουμε ότι τα προσωπικά σας οικονομικά δεδομένα ανήκουν αποκλειστικά σε εσάς. Δεν διατηρούμε εξωτερικούς διακομιστές (cloud servers) για την αποθήκευση των συναλλαγών ή των τραπεζικών σας στοιχείων.</p>
-                </div>
-
-                <div class="section">
-                    <h2>1. Εισαγωγή</h2>
-                    <p>Καλωσορίσατε στο <strong>FinMate: Expense & Budget</strong> («η Εφαρμογή», «εμείς», «μας»). Δεσμευόμαστε να προστατεύουμε το απόρρητό σας. Η παρούσα Πολιτική Απορρήτου εξηγεί τις πρακτικές μας σχετικά με τη συλλογή, χρήση και προστασία των πληροφοριών.</p>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>2. Συλλογή & Αποθήκευση Δεδομένων</h2>
-                    <h3>2.1 100% Τοπική Αποθήκευση Οικονομικών Δεδομένων</h3>
-                    <ul>
-                        <li><strong>Όλες οι οικονομικές εγγραφές</strong>—υπόλοιπα, έξοδα, έσοδα, κατηγορίες, υποχρεώσεις και αποταμιευτικοί στόχοι—αποθηκεύονται <strong>αυστηρά τοπικά στη συσκευή σας</strong> σε βάση δεδομένων SQLite.</li>
-                        <li><strong>Μηδενικός Συγχρονισμός στο Cloud:</strong> Δεν διατηρούμε απομακρυσμένους διακομιστές και δεν συγχρονίζουμε τις συναλλαγές σας σε καμία βάση στο διαδίκτυο.</li>
-                        <li><strong>Κανένα Τραπεζικό Στοιχείο:</strong> Η Εφαρμογή δεν συνδέεται με τραπεζικά APIs (Open Banking), δεν ζητά κωδικούς e-banking, αριθμούς καρτών ή PINs.</li>
-                    </ul>
-
-                    <h3>2.2 Βιομετρικά Στοιχεία & Κλείδωμα Εφαρμογής</h3>
-                    <ul>
-                        <li>Η ταυτοποίηση εκτελείται εξ ολοκλήρου από το hardware keystore της συσκευής σας (<code>local_auth</code>).</li>
-                        <li>Δεν έχουμε ποτέ πρόσβαση ούτε αποθηκεύουμε βιομετρικά δεδομένα.</li>
-                        <li>Τα προσαρμοσμένα PINs κρυπτογραφούνται τοπικά με salted SHA-256 και δεν φεύγουν ποτέ από τη συσκευή σας.</li>
-                    </ul>
-
-                    <h3>2.3 Αυτοματοποιημένη Συλλογή Δεδομένων & SDKs Τρίτων</h3>
-                    <p>Ορισμένες βιβλιοθήκες τρίτων ενδέχεται να επεξεργάζονται ανώνυμα τεχνικά αναγνωριστικά:</p>
-                    <ol>
-                        <li>
-                            <strong>Google Firebase Analytics:</strong> Συλλέγει συγκεντρωτικά τεχνικά συμβάντα για τη σταθερότητα της εφαρμογής. Οικονομικά ποσά και σημειώσεις <strong>δεν</strong> καταγράφονται ποτέ.
-                        </li>
-                        <li>
-                            <strong>Google AdMob & Meta Audience Network:</strong> Προβάλλει διαφημίσεις για τη δωρεάν έκδοση σύμφωνα με το GDPR.
-                        </li>
-                        <li>
-                            <strong>RevenueCat:</strong> Διαχειρίζεται με ασφάλεια τις αγορές αφαίρεσης διαφημίσεων μέσω <strong>Google Play Billing</strong>. Δεν αποθηκεύουμε τραπεζικά στοιχεία ή κάρτες.
-                        </li>
-                    </ol>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>3. Άδειες Συσκευής (Permissions)</h2>
-                    <div class="table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Άδεια</th>
-                                    <th>Σκοπός Χρήσης</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>POST_NOTIFICATIONS</code></td>
-                                    <td>Αποκλειστικά για τοπικές ειδοποιήσεις υπενθύμισης λογαριασμών και υποχρεώσεων (100% τοπικά).</td>
-                                </tr>
-                                <tr>
-                                    <td><code>USE_BIOMETRIC</code> / <code>USE_FINGERPRINT</code></td>
-                                    <td>Για την τοπική επιβεβαίωση της ταυτότητάς σας κατά το ξεκλείδωμα της εφαρμογής.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code></td>
-                                    <td>Απαραίτητο αποκλειστικά για τη φόρτωση διαφημίσεων και ανώνυμων διαγνωστικών σφαλμάτων.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>SCHEDULE_EXACT_ALARM</code></td>
-                                    <td>Απαιτείται σε Android 12+ για την ακριβή παράδοση των υπενθυμίσεων λογαριασμών.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>4. Διατήρηση, Εξαγωγή & Διαγραφή Δεδομένων</h2>
-                    <ul>
-                        <li><strong>Εξαγωγή σε CSV & JSON:</strong> Μπορείτε να εξάγετε όλες τις συναλλαγές σας ανά πάσα στιγμή.</li>
-                        <li><strong>Οριστική Διαγραφή:</strong> Μπορείτε να διαγράψετε οριστικά όλα τα δεδομένα μέσα από την εφαρμογή: **Ρυθμίσεις → Βάση Δεδομένων & Αποθήκευση → Επαναφορά Βάσης Δεδομένων**.</li>
-                    </ul>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>5. Στοιχεία Εμπόρου & Επικοινωνία (Digital Services Act)</h2>
-                    <div class="trader-box">
-                        <h3>🇪🇺 Στοιχεία Εμπόρου / Trader (Ευρωπαϊκός Κανονισμός DSA)</h3>
-                        <p>Σύμφωνα με τον Ευρωπαϊκό Κανονισμό Digital Services Act, τα στοιχεία του εμπόρου για το FinMate είναι:</p>
-                        <ul>
-                            <li><strong>Δημιουργός / Έμπορος:</strong> Αναστάσιος Μερεσεντζής (MerPower)</li>
-                            <li><strong>Διεύθυνση / Έδρα:</strong> Ιουστινιάνη 32, Χίος - 82100, Ελλάδα (GR)</li>
-                            <li><strong>Τηλέφωνο Επικοινωνίας:</strong> <a href="tel:+306972684675">+30 697 268 4675</a></li>
-                            <li><strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a></li>
-                            <li><strong>Ιστοσελίδα:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a></li>
-                            <li><strong>Telegram Υποστήριξη:</strong> <a href="https://t.me/worldnewsreader" target="_blank">https://t.me/worldnewsreader</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <h2>1. Trader & Developer Information (EU Digital Services Act Disclosure)</h2>
+        <div class="trader-box">
+            <p style="margin-top:0;">Pursuant to the European Union Digital Services Act (DSA) and Google Play Trader requirements, the commercial operator and data controller of the Application is registered as an individual trader:</p>
+            <ul style="margin-bottom:0;">
+                <li><strong>Trader / Legal Name:</strong> Anastasios Meresentzis (ΜΕΡΕΣΕΝΤΖΗΣ ΑΝΑΣΤΑΣΙΟΣ)</li>
+                <li><strong>Physical Address:</strong> Ioustiniani 32, Chios, 82100, Greece (GR) (Ιουστινιάνη 32, Χίος - 82100, Ελλάδα)</li>
+                <li><strong>Telephone Number:</strong> +30 697 268 4675</li>
+                <li><strong>Email Address:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a></li>
+                <li><strong>Country of Establishment:</strong> Greece (European Union)</li>
+            </ul>
         </div>
 
-        <!-- ==================================================================== -->
-        <!-- DOCUMENT 2: TERMS OF SERVICE                                        -->
-        <!-- ==================================================================== -->
-        <div id="doc-terms" class="doc-section">
-            
-            <!-- ENGLISH TERMS OF SERVICE -->
-            <div id="terms-en" class="lang-content active">
-                <div class="header">
-                    <div class="app-badge">📜 Legal Agreement • Terms of Service</div>
-                    <h1>Terms of Service for FinMate: Expense & Budget</h1>
-                    <p class="meta-info">
-                        <strong>Last Updated:</strong> November 2026<br>
-                        <strong>Developer:</strong> Anastasios Meresentzis (MerPower)<br>
-                        <strong>Contact Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a><br>
-                        <strong>Website:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a>
-                    </p>
-                </div>
+        <h2>2. Interpretation and Definitions</h2>
+        <ul>
+            <li><strong>Application:</strong> refers to <strong>My Notes - Notepad & Checklist</strong>, the mobile software program provided by Anastasios Meresentzis.</li>
+            <li><strong>Developer / Trader:</strong> refers to Anastasios Meresentzis, Ioustiniani 32, Chios, 82100, Greece ("We", "Us", "Our").</li>
+            <li><strong>Device:</strong> means any mobile device capable of accessing the Service (smartphone, tablet).</li>
+            <li><strong>Personal Data:</strong> is any information that relates to an identified or identifiable individual.</li>
+            <li><strong>Service:</strong> refers to the Application.</li>
+        </ul>
 
-                <div class="highlight-box">
-                    <p><strong>Summary:</strong> By downloading, installing, or using FinMate, you agree to these Terms of Service. FinMate is an offline-first personal financial management and budgeting assistant. It does not provide certified financial, tax, or investment advice.</p>
-                </div>
+        <h2>3. Information We Collect and How We Use It</h2>
+        <h3>A. User Content (Notes, Checklists, Audio & Images)</h3>
+        <p>All notes, to-do checklists, tags, voice memos, and image attachments created in My Notes are stored locally on your device in a private, sandboxed database. We do not read, transmit, or monetize your personal content on external servers without your explicit action.</p>
 
-                <div class="section">
-                    <h2>1. Acceptance of Terms</h2>
-                    <p>These Terms of Service ("Terms") govern your access to and use of the <strong>FinMate: Expense & Budget</strong> mobile application ("App"), developed and published by <strong>Anastasios Meresentzis (MerPower)</strong> ("Developer", "we", "us", or "our").</p>
-                    <p>By installing, downloading, or using the App, you signify that you have read, understood, and agreed to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you must not use or download the App.</p>
-                </div>
+        <h3>B. Device Permissions</h3>
+        <ul>
+            <li><strong>Microphone (<code>RECORD_AUDIO</code>):</strong> Used solely when recording voice notes. Audio is stored on-device and never transmitted to third parties.</li>
+            <li><strong>Camera (<code>CAMERA</code>):</strong> Used exclusively when you choose to scan a QR code for 1-Tap Note Sharing, or when taking a photo to attach to a note.</li>
+            <li><strong>Biometrics (<code>USE_BIOMETRIC</code>):</strong> Used to unlock the app when you enable App Lock. Biometric authentication is handled strictly by the Android operating system; My Notes never collects or stores biometric data.</li>
+            <li><strong>Notifications & Alarms:</strong> Used to deliver your scheduled reminders.</li>
+            <li><strong>Location:</strong> My Notes <strong>does not</strong> collect, request, or track your physical GPS or location data.</li>
+        </ul>
 
-                <hr>
+        <h3>C. Cloud Backups & 1-Tap Note Sharing (User-Initiated)</h3>
+        <ul>
+            <li><strong>Google Drive Cloud Backup:</strong> Backups are stored directly in your own private Google Drive storage via Google Sign-In. We do not have access to your credentials or cloud storage.</li>
+            <li><strong>1-Tap Note Sharing:</strong> If you share a note via 6-digit code or QR, only that specific note is temporarily hosted on our secure cloud backend (Firebase). You can terminate sharing at any time with 1 tap.</li>
+        </ul>
 
-                <div class="section">
-                    <h2>2. Financial Disclaimer (Non-Advisory Tool)</h2>
-                    <div class="warning-box">
-                        <p><strong>Important Financial Notice:</strong> FinMate is designed strictly as an organizational, record-keeping, and budgeting tool for personal convenience.</p>
-                    </div>
-                    <ul>
-                        <li><strong>No Financial Advice:</strong> The App, including its "Safe-to-Spend" calculation engine, budget indicators, and analytics, does not provide legal, accounting, tax, or investment advice.</li>
-                        <li><strong>No Bank Connections:</strong> The App does not initiate payments, hold funds, or directly link to banking systems. All transactions, balances, and recurring obligations are manually entered or imported by the user.</li>
-                        <li><strong>User Responsibility:</strong> You are solely responsible for verifying the accuracy of your numbers and financial decisions. The Developer assumes no responsibility for financial losses or overdrafts resulting from your use of the App.</li>
-                    </ul>
-                </div>
+        <h3>D. Third-Party Services & Diagnostics</h3>
+        <ul>
+            <li><strong>Google AdMob & UMP:</strong> To display ads and manage consent in compliance with GDPR and Google policies. You can adjust consent anytime via Settings &gt; "Privacy Options".</li>
+            <li><strong>Firebase Crashlytics:</strong> Anonymous diagnostic crash logs to improve app stability.</li>
+            <li><strong>In-App Purchases (RevenueCat):</strong> Pro subscriptions are processed securely via Google Play Billing.</li>
+        </ul>
 
-                <hr>
+        <h2>4. Data Retention and Deletion</h2>
+        <p>You have full control to edit or permanently delete your notes, checklists, and attachments at any time within the app. Uninstalling the application will delete all local data unless backed up.</p>
 
-                <div class="section">
-                    <h2>3. In-App Purchases, Subscriptions & Billing</h2>
-                    <p>The App offers optional in-app purchases and subscriptions (such as "Remove Ads" or "FinMate Premium") powered by the Google Play Store billing platform and RevenueCat:</p>
-                    <ul>
-                        <li><strong>Google Play Billing:</strong> All financial transactions, billing, and payment processing are handled directly by Google Play. We do not store or process your credit card or payment information.</li>
-                        <li><strong>Subscriptions & Renewal:</strong> Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing cycle through your Google Play account settings.</li>
-                        <li><strong>Cancellations & Refunds:</strong> You may cancel subscriptions at any time via the Google Play Store app (<em>Profile &gt; Payments &amp; Subscriptions &gt; Subscriptions</em>). Refunds are subject to the official Google Play Refund Policy.</li>
-                        <li><strong>EU / EEA Right of Withdrawal:</strong> Under European consumer protection regulations, by initiating a digital purchase and receiving immediate access to premium features, you acknowledge that you consent to immediate performance and waive the right of withdrawal, subject to Google Play's standard refund terms.</li>
-                    </ul>
-                </div>
+        <h2>5. Children's Privacy</h2>
+        <p>My Notes does not knowingly collect personally identifiable information from children under the age of 13. If you believe your child has provided us with personal data, please contact us immediately.</p>
 
-                <hr>
+        <h2>6. Security of Your Personal Data</h2>
+        <p>We value your trust in using My Notes. We implement standard industry practices, including sandbox storage, secure HTTPS/TLS protocols for any cloud communication, and device-level biometric authentication, to safeguard your information.</p>
 
-                <div class="section">
-                    <h2>4. Advertisements & Third-Party Services</h2>
-                    <p>The free version of FinMate displays advertisements provided by Google AdMob. Interacting with advertisements may redirect you to third-party websites or services. We are not responsible for the content, privacy policies, or practices of third-party advertisers.</p>
-                </div>
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy periodically. Any changes will be posted on this page with an updated "Last updated" date.</p>
 
-                <hr>
-
-                <div class="section">
-                    <h2>5. User Data, Storage & Backups</h2>
-                    <ul>
-                        <li><strong>Offline-First Storage:</strong> Your financial records, accounts, and categories are stored locally on your device in an encrypted SQLite database.</li>
-                        <li><strong>Backups & Portability:</strong> The App provides manual backup/restore and CSV export features. You are solely responsible for creating regular backups of your data. The Developer is not liable for data loss caused by device loss, app uninstallation, or operating system resets.</li>
-                    </ul>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>6. Intellectual Property & License</h2>
-                    <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use FinMate on your personal Android device solely for non-commercial purposes. All copyrights, trademarks, software code, UI designs, and logos remain the exclusive intellectual property of the Developer.</p>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>7. Limitation of Liability & Warranties</h2>
-                    <p>The App is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, either express or implied. To the maximum extent permitted by applicable law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages.</p>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>8. Governing Law & Trader Information</h2>
-                    <p>These Terms shall be governed by and construed in accordance with the laws of Greece and the European Union.</p>
-                    <div class="trader-box">
-                        <h3>🇪🇺 Trader Identification (under EU Digital Services Act)</h3>
-                        <ul>
-                            <li><strong>Trader / Developer Name:</strong> Anastasios Meresentzis (MerPower)</li>
-                            <li><strong>Registered Address:</strong> 32 Ioustiniani St., Chios - 82100, Greece (GR)</li>
-                            <li><strong>Telephone:</strong> <a href="tel:+306972684675">+30 697 268 4675</a></li>
-                            <li><strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a></li>
-                            <li><strong>Website:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a></li>
-                            <li><strong>Telegram Support:</strong> <a href="https://t.me/worldnewsreader" target="_blank">https://t.me/worldnewsreader</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GREEK TERMS OF SERVICE -->
-            <div id="terms-el" class="lang-content">
-                <div class="header">
-                    <div class="app-badge">📜 Νομικό Έγγραφο • Όροι Χρήσης</div>
-                    <h1>Όροι Χρήσης - FinMate: Expense & Budget</h1>
-                    <p class="meta-info">
-                        <strong>Τελευταία Ενημέρωση:</strong> Νοέμβριος 2026<br>
-                        <strong>Δημιουργός:</strong> Αναστάσιος Μερεσεντζής (MerPower)<br>
-                        <strong>Email Επικοινωνίας:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a><br>
-                        <strong>Ιστοσελίδα:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a>
-                    </p>
-                </div>
-
-                <div class="highlight-box">
-                    <p><strong>Σύνοψη:</strong> Με τη λήψη ή τη χρήση της εφαρμογής FinMate, αποδέχεστε τους παρόντες Όρους Χρήσης. Το FinMate είναι ένα τοπικό εργαλείο οργάνωσης προσωπικών οικονομικών και δεν παρέχει πιστοποιημένες χρηματοοικονομικές ή επενδυτικές συμβουλές.</p>
-                </div>
-
-                <div class="section">
-                    <h2>1. Αποδοχή των Όρων</h2>
-                    <p>Οι παρόντες Όροι Χρήσης ("Όροι") ρυθμίζουν την πρόσβαση και τη χρήση της εφαρμογής <strong>FinMate: Expense &amp; Budget</strong> ("Εφαρμογή"), η οποία αναπτύχθηκε από τον <strong>Αναστάσιο Μερεσεντζή (MerPower)</strong> ("Δημιουργός", "εμείς").</p>
-                    <p>Με την εγκατάσταση ή χρήση της Εφαρμογής, δηλώνετε ότι έχετε διαβάσει, κατανοήσει και συμφωνήσει με τους παρόντες Όρους καθώς και με την Πολιτική Απορρήτου μας.</p>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>2. Αποποίηση Χρηματοοικονομικής Ευθύνης</h2>
-                    <div class="warning-box">
-                        <p><strong>Σημαντική Σημείωση:</strong> Το FinMate αποτελεί αποκλειστικά ένα υποβοηθητικό εργαλείο καταγραφής και υπολογισμού για προσωπική χρήση.</p>
-                    </div>
-                    <ul>
-                        <li><strong>Μη Παροχή Συμβουλών:</strong> Η Εφαρμογή, συμπεριλαμβανομένου του αλγορίθμου «Safe-to-Spend» και των αναφορών προϋπολογισμού, δεν αποτελεί φορολογική, νομική ή επενδυτική συμβουλή.</li>
-                        <li><strong>Χωρίς Τραπεζική Σύνδεση:</strong> Η Εφαρμογή δεν συνδέεται με τράπεζες, δεν διατηρεί κεφάλαια και δεν εκτελεί συναλλαγές. Όλα τα δεδομένα καταχωρούνται χειροκίνητα από τον χρήστη.</li>
-                        <li><strong>Ευθύνη Χρήστη:</strong> Είστε αποκλειστικά υπεύθυνοι για την ορθότητα των εγγραφών σας και τις οικονομικές σας αποφάσεις.</li>
-                    </ul>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>3. Αγορές Εντός Εφαρμογής &amp; Συνδρομές</h2>
-                    <p>Η Εφαρμογή παρέχει προαιρετικές αγορές και συνδρομές (π.χ. «Αφαίρεση Διαφημίσεων» ή «Premium») μέσω του συστήματος Google Play Billing και RevenueCat:</p>
-                    <ul>
-                        <li><strong>Πληρωμές μέσω Google Play:</strong> Όλες οι συναλλαγές διεκπεραιώνονται απευθείας από την Google. Δεν συλλέγουμε ούτε αποθηκεύουμε στοιχεία πιστωτικών καρτών.</li>
-                        <li><strong>Αυτόματη Ανανέωση:</strong> Οι συνδρομές ανανεώνονται αυτόματα, εκτός αν ακυρωθούν τουλάχιστον 24 ώρες πριν τη λήξη της τρέχουσας περιόδου μέσω των ρυθμίσεων του Google Play.</li>
-                        <li><strong>Ακυρώσεις &amp; Επιστροφές:</strong> Μπορείτε να ακυρώσετε τη συνδρομή σας οποιαδήποτε στιγμή μέσω του Google Play Store (<em>Προφίλ &gt; Πληρωμές και συνδρομές &gt; Συνδρομές</em>). Οι επιστροφές χρημάτων διέπονται από την επίσημη Πολιτική Επιστροφών της Google.</li>
-                        <li><strong>Δικαίωμα Υπαναχώρησης ΕΕ/ΕΟΧ:</strong> Με την έναρξη άμεσης πρόσβασης στο ψηφιακό περιεχόμενο, συναινείτε στην άμεση εκτέλεση της σύμβασης σύμφωνα με την ευρωπαϊκή νομοθεσία προστασίας καταναλωτή.</li>
-                    </ul>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>4. Διαφημίσεις &amp; Υπηρεσίες Τρίτων</h2>
-                    <p>Η δωρεάν έκδοση του FinMate προβάλλει διαφημίσεις μέσω του Google AdMob. Δεν φέρουμε ευθύνη για το περιεχόμενο ή τις πρακτικές των ιστοτόπων τρίτων προς τους οποίους ενδέχεται να ανακατευθυνθείτε.</p>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>5. Δεδομένα &amp; Αντίγραφα Ασφαλείας</h2>
-                    <ul>
-                        <li><strong>Τοπική Αποθήκευση:</strong> Όλα τα οικονομικά σας δεδομένα αποθηκεύονται τοπικά στη συσκευή σας σε βάση δεδομένων SQLite.</li>
-                        <li><strong>Δημιουργία Backups:</strong> Ο χρήστης φέρει την ευθύνη για τη λήψη τακτικών αντιγράφων ασφαλείας. Ο Δημιουργός δεν ευθύνεται για απώλεια δεδομένων λόγω αλλαγής συσκευής ή διαγραφής της εφαρμογής.</li>
-                    </ul>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>6. Πνευματική Ιδιοκτησία</h2>
-                    <p>Σας παραχωρείται μια προσωπική, μη αποκλειστική, μη μεταβιβάσιμη άδεια χρήσης του FinMate στη συσκευή σας. Όλα τα πνευματικά δικαιώματα, ο κώδικας, τα γραφικά και τα λογότυπα παραμένουν στην αποκλειστική ιδιοκτησία του Δημιουργού.</p>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>7. Περιορισμός Ευθύνης</h2>
-                    <p>Η Εφαρμογή παρέχεται «ΩΣ ΕΧΕΙ» ("AS IS") χωρίς καμία ρητή ή σιωπηρή εγγύηση. Στο μέγιστο βαθμό που επιτρέπεται από τον νόμο, ο Δημιουργός δεν φέρει καμία ευθύνη για οποιαδήποτε άμεση ή έμμεση ζημία προκύψει από τη χρήση της Εφαρμογής.</p>
-                </div>
-
-                <hr>
-
-                <div class="section">
-                    <h2>8. Εφαρμοστέο Δίκαιο &amp; Στοιχεία Εμπόρου (Trader)</h2>
-                    <p>Οι παρόντες Όροι διέπονται από το Ελληνικό Δίκαιο και το Δίκαιο της Ευρωπαϊκής Ένωσης.</p>
-                    <div class="trader-box">
-                        <h3>🇪🇺 Στοιχεία Εμπόρου / Trader (Ευρωπαϊκός Κανονισμός DSA)</h3>
-                        <ul>
-                            <li><strong>Δημιουργός / Έμπορος:</strong> Αναστάσιος Μερεσεντζής (MerPower)</li>
-                            <li><strong>Διεύθυνση / Έδρα:</strong> Ιουστινιάνη 32, Χίος - 82100, Ελλάδα (GR)</li>
-                            <li><strong>Τηλέφωνο Επικοινωνίας:</strong> <a href="tel:+306972684675">+30 697 268 4675</a></li>
-                            <li><strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a></li>
-                            <li><strong>Ιστοσελίδα:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank">https://merpowerapps.infinityfreeapp.com/?i=1</a></li>
-                            <li><strong>Telegram Υποστήριξη:</strong> <a href="https://t.me/worldnewsreader" target="_blank">https://t.me/worldnewsreader</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2>8. Contact Us & Trader Inquiries</h2>
+        <p>If you have any questions or consumer rights inquiries regarding this Privacy Policy, please contact us:</p>
+        <ul>
+            <li><strong>Trader / Developer:</strong> Anastasios Meresentzis (ΜΕΡΕΣΕΝΤΖΗΣ ΑΝΑΣΤΑΣΙΟΣ)</li>
+            <li><strong>Physical Address:</strong> Ioustiniani 32, Chios, 82100, Greece (GR)</li>
+            <li><strong>Phone:</strong> +30 697 268 4675</li>
+            <li><strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a></li>
+        </ul>
     </div>
-
-    <footer>
-        &copy; 2026 FinMate: Expense &amp; Budget • Anastasios Meresentzis (MerPower). All rights reserved.
-    </footer>
-
-    <script>
-        let currentDoc = 'privacy';
-        let currentLang = 'en';
-
-        function updateView() {
-            // Document tab visibility
-            document.querySelectorAll('.doc-section').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-
-            document.getElementById('doc-' + currentDoc).classList.add('active');
-            document.getElementById('tab-' + currentDoc).classList.add('active');
-
-            // Language content visibility inside the active document
-            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
-
-            const targetContentId = currentDoc + '-' + currentLang;
-            const targetContent = document.getElementById(targetContentId);
-            if (targetContent) {
-                targetContent.classList.add('active');
-            }
-
-            document.getElementById('btn-' + currentLang).classList.add('active');
-            document.documentElement.lang = currentLang;
-
-            // Update Tab button labels according to language
-            if (currentLang === 'el') {
-                document.querySelector('.tab-label-privacy').textContent = 'Πολιτική Απορρήτου';
-                document.querySelector('.tab-label-terms').textContent = 'Όροι Χρήσης';
-            } else {
-                document.querySelector('.tab-label-privacy').textContent = 'Privacy Policy';
-                document.querySelector('.tab-label-terms').textContent = 'Terms of Service';
-            }
-        }
-
-        function setDocument(doc) {
-            currentDoc = doc;
-            window.location.hash = doc;
-            updateView();
-        }
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            updateView();
-        }
-
-        // Auto-detect URL Hash (#terms or #privacy) & Browser language on load
-        (function() {
-            const hash = window.location.hash.toLowerCase();
-            if (hash === '#terms' || hash.includes('terms')) {
-                currentDoc = 'terms';
-            } else {
-                currentDoc = 'privacy';
-            }
-
-            const userLang = navigator.language || navigator.userLanguage;
-            if (userLang && userLang.toLowerCase().startsWith('el')) {
-                currentLang = 'el';
-            } else {
-                currentLang = 'en';
-            }
-
-            updateView();
-        })();
-    </script>
 </body>
 </html>
