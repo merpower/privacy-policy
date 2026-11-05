@@ -147,8 +147,8 @@
         <h3>B. Device Permissions</h3>
         <ul>
             <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Used strictly for scheduled local notifications to remind you of upcoming bill due dates, recurring expenses, and payday updates. Notifications are generated 100% locally on your device.</li>
-            <li><strong>Exact Alarms (<code>SCHEDULE_EXACT_ALARM</code>):</strong> Used exclusively to trigger bill and budget reminders precisely at the scheduled time.</li>
             <li><strong>Biometrics (<code>USE_BIOMETRIC</code> / <code>USE_FINGERPRINT</code>):</strong> Used to unlock the Application when you enable App Lock. Biometric authentication is handled entirely by your device operating system hardware keystore; FinMate never collects, stores, or accesses your biometric templates. Custom PINs are hashed locally using salted SHA-256 and never leave your device.</li>
+            <li><strong>Device Reboot Restoration (<code>RECEIVE_BOOT_COMPLETED</code>):</strong> Used solely to re-register your local bill reminders after your device restarts, ensuring you never miss a scheduled reminder.</li>
             <li><strong>Storage Access (User-Initiated):</strong> Used only when you explicitly choose to export or import local CSV or JSON backup files using the Android Storage Access Framework.</li>
             <li><strong>No Camera / Microphone / Location:</strong> FinMate <strong>does not</strong> request or use Camera, Microphone, or GPS/Location permissions.</li>
         </ul>
