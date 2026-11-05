@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - My Notes - Notepad & Checklist</title>
+    <title>Privacy Policy - FinMate: Expense & Budget</title>
     <style>
         :root {
             --bg-color: #0F172A;
             --card-bg: #1E293B;
             --text-color: #F8FAFC;
             --text-muted: #94A3B8;
-            --primary: #6366F1;
+            --primary: #10B981;
             --border: #334155;
         }
         body {
@@ -60,8 +60,8 @@
             margin-bottom: 24px;
         }
         .badge {
-            background: rgba(99, 102, 241, 0.2);
-            color: #A5B4FC;
+            background: rgba(16, 185, 129, 0.2);
+            color: #6EE7B7;
             padding: 4px 10px;
             border-radius: 6px;
             font-size: 0.85rem;
@@ -76,7 +76,7 @@
             font-weight: 600;
         }
         a {
-            color: #818CF8;
+            color: #34D399;
             text-decoration: none;
         }
         a:hover {
@@ -89,7 +89,7 @@
             margin-bottom: 8px;
         }
         .highlight-box {
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(16, 185, 129, 0.1);
             border-left: 4px solid var(--primary);
             padding: 16px;
             border-radius: 0 8px 8px 0;
@@ -106,18 +106,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>My Notes - Notepad & Checklist <span class="badge">Privacy Policy</span> <span class="trader-badge">Trader Verified</span></h1>
-        <div class="last-updated"><strong>Last updated:</strong> November 4, 2026</div>
+        <h1>FinMate: Expense & Budget <span class="badge">Privacy Policy</span> <span class="trader-badge">Trader Verified</span></h1>
+        <div class="last-updated"><strong>Last updated:</strong> November 6, 2026</div>
 
-        <p>This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information when you use <strong>My Notes - Notepad & Checklist</strong> (the "Application" or "Service"), and explains your privacy rights and how the law protects you.</p>
+        <p>This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information when you use <strong>FinMate: Expense & Budget</strong> (the "Application" or "Service"), and explains your privacy rights and how the law protects you.</p>
 
         <div class="highlight-box">
-            <strong>Privacy-First Architecture:</strong> My Notes is designed so that your personal notes, checklists, voice recordings, and attachments remain strictly under your control on your device unless you explicitly choose to back them up to your Google Drive or share them with peers.
+            <strong>100% Offline, Privacy-First Architecture:</strong> FinMate is built on the fundamental principle that your financial data belongs strictly to you. All financial records—including transactions, account balances, monthly budgets, savings goals, and recurring obligations—are stored exclusively on your device in a sandboxed local database. We operate zero cloud servers for your personal financial data.
         </div>
 
         <h2>1. Trader & Developer Information (EU Digital Services Act Disclosure)</h2>
         <div class="trader-box">
-            <p style="margin-top:0;">Pursuant to the European Union Digital Services Act (DSA) and Google Play Trader requirements, the commercial operator and data controller of the Application is registered as an individual trader:</p>
+            <p style="margin-top:0;">Pursuant to Article 30 of the European Union Digital Services Act (DSA) and Google Play Trader transparency requirements, the commercial operator and data controller of the Application is registered as an individual trader:</p>
             <ul style="margin-bottom:0;">
                 <li><strong>Trader / Legal Name:</strong> Anastasios Meresentzis (ΜΕΡΕΣΕΝΤΖΗΣ ΑΝΑΣΤΑΣΙΟΣ)</li>
                 <li><strong>Physical Address:</strong> Ioustiniani 32, Chios, 82100, Greece (GR) (Ιουστινιάνη 32, Χίος - 82100, Ελλάδα)</li>
@@ -129,7 +129,7 @@
 
         <h2>2. Interpretation and Definitions</h2>
         <ul>
-            <li><strong>Application:</strong> refers to <strong>My Notes - Notepad & Checklist</strong>, the mobile software program provided by Anastasios Meresentzis.</li>
+            <li><strong>Application:</strong> refers to <strong>FinMate: Expense & Budget</strong>, the mobile software program provided by Anastasios Meresentzis.</li>
             <li><strong>Developer / Trader:</strong> refers to Anastasios Meresentzis, Ioustiniani 32, Chios, 82100, Greece ("We", "Us", "Our").</li>
             <li><strong>Device:</strong> means any mobile device capable of accessing the Service (smartphone, tablet).</li>
             <li><strong>Personal Data:</strong> is any information that relates to an identified or identifiable individual.</li>
@@ -137,50 +137,57 @@
         </ul>
 
         <h2>3. Information We Collect and How We Use It</h2>
-        <h3>A. User Content (Notes, Checklists, Audio & Images)</h3>
-        <p>All notes, to-do checklists, tags, voice memos, and image attachments created in My Notes are stored locally on your device in a private, sandboxed database. We do not read, transmit, or monetize your personal content on external servers without your explicit action.</p>
+        <h3>A. Financial Records & Local Content</h3>
+        <p>All expense entries, incomes, category budgets, bank account aliases, debts/obligations, recurring bill rules, and notes created in FinMate are stored <strong>strictly locally</strong> on your device via an isolated SQLite database. We do not read, transmit, sell, or host your monetary records on external servers. Furthermore:</p>
+        <ul>
+            <li><strong>Zero Bank Scraping:</strong> The Application does not connect to Open Banking APIs, scrape banking portals, or ask for your bank account credentials, credit card numbers, or online banking passwords.</li>
+            <li><strong>No Account Required:</strong> You can use FinMate immediately without creating an account or providing your name or email.</li>
+        </ul>
 
         <h3>B. Device Permissions</h3>
         <ul>
-            <li><strong>Microphone (<code>RECORD_AUDIO</code>):</strong> Used solely when recording voice notes. Audio is stored on-device and never transmitted to third parties.</li>
-            <li><strong>Camera (<code>CAMERA</code>):</strong> Used exclusively when you choose to scan a QR code for 1-Tap Note Sharing, or when taking a photo to attach to a note.</li>
-            <li><strong>Biometrics (<code>USE_BIOMETRIC</code>):</strong> Used to unlock the app when you enable App Lock. Biometric authentication is handled strictly by the Android operating system; My Notes never collects or stores biometric data.</li>
-            <li><strong>Notifications & Alarms:</strong> Used to deliver your scheduled reminders.</li>
-            <li><strong>Location:</strong> My Notes <strong>does not</strong> collect, request, or track your physical GPS or location data.</li>
+            <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Used strictly for scheduled local notifications to remind you of upcoming bill due dates, recurring expenses, and payday updates. Notifications are generated 100% locally on your device.</li>
+            <li><strong>Exact Alarms (<code>SCHEDULE_EXACT_ALARM</code>):</strong> Used exclusively to trigger bill and budget reminders precisely at the scheduled time.</li>
+            <li><strong>Biometrics (<code>USE_BIOMETRIC</code> / <code>USE_FINGERPRINT</code>):</strong> Used to unlock the Application when you enable App Lock. Biometric authentication is handled entirely by your device operating system hardware keystore; FinMate never collects, stores, or accesses your biometric templates. Custom PINs are hashed locally using salted SHA-256 and never leave your device.</li>
+            <li><strong>Storage Access (User-Initiated):</strong> Used only when you explicitly choose to export or import local CSV or JSON backup files using the Android Storage Access Framework.</li>
+            <li><strong>No Camera / Microphone / Location:</strong> FinMate <strong>does not</strong> request or use Camera, Microphone, or GPS/Location permissions.</li>
         </ul>
 
-        <h3>C. Cloud Backups & 1-Tap Note Sharing (User-Initiated)</h3>
-        <ul>
-            <li><strong>Google Drive Cloud Backup:</strong> Backups are stored directly in your own private Google Drive storage via Google Sign-In. We do not have access to your credentials or cloud storage.</li>
-            <li><strong>1-Tap Note Sharing:</strong> If you share a note via 6-digit code or QR, only that specific note is temporarily hosted on our secure cloud backend (Firebase). You can terminate sharing at any time with 1 tap.</li>
-        </ul>
+        <h3>C. Data Portability & Local Backups</h3>
+        <p>You maintain full ownership and control over your financial records. You can export your entire transaction history to standard CSV spreadsheets or JSON backup files directly to your device storage at any time. We do not perform automatic cloud synchronization.</p>
 
         <h3>D. Third-Party Services & Diagnostics</h3>
+        <p>To support ongoing maintenance and provide optional features, the Application integrates the following trusted third-party SDKs:</p>
         <ul>
-            <li><strong>Google AdMob & UMP:</strong> To display ads and manage consent in compliance with GDPR and Google policies. You can adjust consent anytime via Settings &gt; "Privacy Options".</li>
-            <li><strong>Firebase Crashlytics:</strong> Anonymous diagnostic crash logs to improve app stability.</li>
-            <li><strong>In-App Purchases (RevenueCat):</strong> Pro subscriptions are processed securely via Google Play Billing.</li>
+            <li><strong>Google AdMob & UMP:</strong> Used to display advertisements supporting free usage. AdMob and its mediation partners use pseudonymous mobile advertising identifiers (GAID) in accordance with GDPR/ePrivacy regulations. You can manage or revoke consent at any time via Settings &gt; Privacy Options, or upgrade to the Ad-Free version.</li>
+            <li><strong>Firebase Crashlytics & Analytics:</strong> Collects anonymous diagnostic metrics (device model, OS version, app crashes) to ensure app stability. <strong>No financial amounts, account balances, or transaction notes are ever sent to analytics.</strong></li>
+            <li><strong>Google Play Billing & RevenueCat:</strong> Handles optional in-app purchases (such as the permanent Ad-Free Pro upgrade). All payment details and card transactions are processed securely and exclusively by Google Play. We never receive or store your financial payment credentials.</li>
         </ul>
 
-        <h2>4. Data Retention and Deletion</h2>
-        <p>You have full control to edit or permanently delete your notes, checklists, and attachments at any time within the app. Uninstalling the application will delete all local data unless backed up.</p>
+        <h2>4. Data Retention, Export and Deletion</h2>
+        <ul>
+            <li><strong>In-App Deletion:</strong> You can edit or permanently delete individual transactions, categories, and accounts at any time.</li>
+            <li><strong>Complete Database Reset:</strong> You can wipe all stored data instantly from within the app via <em>Settings &gt; Database & Storage &gt; Reset Database</em>.</li>
+            <li><strong>Uninstalling:</strong> Removing the Application permanently deletes all locally stored databases and settings from your device.</li>
+        </ul>
 
-        <h2>5. Children's Privacy</h2>
-        <p>My Notes does not knowingly collect personally identifiable information from children under the age of 13. If you believe your child has provided us with personal data, please contact us immediately.</p>
+        <h2>5. Children's Privacy (COPPA & GDPR-K)</h2>
+        <p>FinMate does not knowingly collect or solicit personal information from children under the age of 13 (or 16 in the European Union). The app does not target children.</p>
 
         <h2>6. Security of Your Personal Data</h2>
-        <p>We value your trust in using My Notes. We implement standard industry practices, including sandbox storage, secure HTTPS/TLS protocols for any cloud communication, and device-level biometric authentication, to safeguard your information.</p>
+        <p>Because your financial data resides solely on your physical device, its security is anchored in Android's application sandboxing architecture. We enhance this protection with local biometric locking, salted PIN hashing, and secure TLS/HTTPS protocols for diagnostic telemetry.</p>
 
         <h2>7. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy periodically. Any changes will be posted on this page with an updated "Last updated" date.</p>
+        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.</p>
 
         <h2>8. Contact Us & Trader Inquiries</h2>
-        <p>If you have any questions or consumer rights inquiries regarding this Privacy Policy, please contact us:</p>
+        <p>If you have any questions, feedback, or consumer rights inquiries under the EU Digital Services Act, please contact:</p>
         <ul>
             <li><strong>Trader / Developer:</strong> Anastasios Meresentzis (ΜΕΡΕΣΕΝΤΖΗΣ ΑΝΑΣΤΑΣΙΟΣ)</li>
             <li><strong>Physical Address:</strong> Ioustiniani 32, Chios, 82100, Greece (GR)</li>
             <li><strong>Phone:</strong> +30 697 268 4675</li>
             <li><strong>Email:</strong> <a href="mailto:anastasiosmeresentzes@gmail.com">anastasiosmeresentzes@gmail.com</a></li>
+            <li><strong>Website:</strong> <a href="https://merpowerapps.infinityfreeapp.com/?i=1" target="_blank" rel="noopener">https://merpowerapps.infinityfreeapp.com/?i=1</a></li>
         </ul>
     </div>
 </body>
